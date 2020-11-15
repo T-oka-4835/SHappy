@@ -1,24 +1,49 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# SHappy
 
-Things you may want to cover:
+## サイト概要
+自分の感じたストレスを投稿し、ストレスと客観的に向き合うためのアプリです。
+アメリカのある研究で、ストレスをどのように捉えるかによって、ストレスが
+体に良い物質となるのか、悪い物質となるのかが決まるという説があります。
 
-* Ruby version
+そこで、ストレスを感じた際に、感じたストレスを一度言語化し、
+その上で「このストレスは体に悪くない」と捉えることで、
+ストレスからの体調不良を減らすことができ、結果として幸せを感じられる
+機会を増やせることができると考えております。
 
-* System dependencies
+また、ただストレスを書き出すだけではなく、ストレスを発散するための
+ページも作成しております。
 
-* Configuration
+### サイトテーマ
+StressをHappyに
 
-* Database creation
+### テーマを選んだ理由
+私自身、前職で、ストレスが原因で2度体を壊しました。
+休職や欠勤をしたわけではありませんが、休みの日に布団から出る
+ことができず、人と話せなくなった期間がありました。
 
-* Database initialization
+ここで強調したいのが、「ストレスは体に悪くない」という研究を
+知っていたにも関わらず、ストレスに耐えられなかったことです。
+この経験から、一度「ストレスは体に悪くない」と知っただけでは、
+本当にストレスに直面した際に効果がないと気付きました。
 
-* How to run the test suite
+そこで、ストレスを感じたら直ぐに向き合うことができる
+仕組みを作りたいと考え、このテーマを選びました。
 
-* Services (job queues, cache servers, search engines, etc.)
+### ターゲットユーザ
+ビジネスパーソン、主婦、学生など、ストレスに悩む全ての方
 
-* Deployment instructions
+### 主な利用シーン
+ストレスを感じた時
 
-* ...
+## 設計書
+
+### 機能一覧
+https://docs.google.com/spreadsheets/d/1VuzytJDyfRnKOpKGh5nf62pf6_FVhTT47GifVnXuxHo/edit#gid=0
+
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails(5.2.4.4)
+- JSライブラリ：jQuery
+- 仮想環境：Vagrant,VirtualBox

@@ -9,6 +9,33 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header>
+    <% if user_signed_in? %>
+      <li class="header-nav">
+        <%= link_to 'マイページ', "#" %>
+      </li>
+      <li class="header-nav">
+        <%= link_to 'ストレスを吐き出す', "#" %>
+      </li>
+      <li class="header-nav">
+        <%= link_to 'ストレスを発散する', "#" %>
+      </li>
+      <li class="header-nav">
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      </li>
+    <% else %>
+      <li class="header-nav">
+        <%= link_to "SHappyについて", "/" %>
+      </li>
+      <li class="header-nav">
+        <%= link_to "新規登録", new_user_registration_path %>
+      </li>
+      <li class="header-nav">
+        <%= link_to "ログイン", new_user_session_path %>
+      </li>
+    <% end %>
+  </header>
+
   <body>
     <%= yield %>
   </body>

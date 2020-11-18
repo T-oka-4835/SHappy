@@ -1,0 +1,20 @@
+<h2>ストレス詳細</h2>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th><h4>タイトル</h4></th>
+      <th><h4>本文</h4></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><% @stress.title %></td>
+      <td><% @stress.body %></td>
+    </tr>
+  </tbody>
+
+<div><%= link_to "一覧に戻る", stresses_path %></div>
+<div><%= link_to "編集する", edit_stress_path(@stress) %></div>
+
+

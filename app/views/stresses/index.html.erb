@@ -9,18 +9,20 @@
 
      <div class="col-lg-7">
        <h2>過去のストレス</h2>
-         <% @stresses.each do |stress| %>
        <table class="table table-bordered">
          <thead>
            <tr>
              <th><h4>タイトル</h4></th>
              <th><h4>本文</h4></th>
+             <th></th>
            </tr>
          </thead>
+         <% @stresses.each do |stress| %>
          <tbody>
            <tr>
              <td><%= stress.title %></td>
              <td><%= stress.body %></td>
+             <td><%= link_to "詳細", stress_path(stress.id) %></td>
            </tr>
          </tbody>
          <% end %>

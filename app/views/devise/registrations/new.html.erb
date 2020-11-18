@@ -3,22 +3,22 @@
   <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+  <div class="field form-word">
     <%= f.label :"名前" %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
+  <div class="field form-word">
     <%= f.label :"電話番号" %><br />
     <%= f.text_field :phonenumber, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
+  <div class="field form-word">
     <%= f.label :"メールアドレス" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
+  <div class="field form-word">
     <%= f.label :"パスワード" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> 文字以上)</em>
@@ -26,7 +26,7 @@
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
+  <div class="field form-word">
     <%= f.label :"パスワード確認" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>

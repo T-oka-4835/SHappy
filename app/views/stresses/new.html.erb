@@ -2,8 +2,12 @@
 
 <%= form_with model:@stress, url:stresses_path, local:true do |f| %>
 <h4>タイトル</h4>
-<%= f.text_field :title %>
+<div class="form-word">
+  <%= f.text_field :title %>  
+</div>
 <h4>本文</h4>
-<%= f.text_area :body %>
+<div class="form-word"> 
+  <%= f.text_area :body %>
+</div>
 <%= f.submit "投稿する" %>
 <% end %>

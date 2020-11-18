@@ -1,0 +1,13 @@
+<h2>ストレスを編集する</h2>
+
+<%= form_with model: @stress, url: stress_path(@stress.id), method: :patch, local:true do |f| %>
+<h4>タイトル</h4>
+<div class="form-word">
+  <%= f.text_field :title %>
+</div>
+<h4>本文</h4>
+<div class="form-word">
+  <%= f.text_area :body %>
+</div>
+<%= f.submit "編集する" %>
+<% end %>

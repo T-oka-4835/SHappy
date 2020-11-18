@@ -1,1 +1,30 @@
-<h1>ここはindexページです</h1>
+<div class="contaier">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="stress-index-picture">
+        <img src="take-it-easy-55e8d1414e_640.jpg">
+      </div>
+      <h1>ここはindexページです</h1>
+    </div>
+
+     <div class="col-lg-7">
+       <h2>過去のストレス</h2>
+         <% @stresses.each do |stress| %>
+       <table class="table table-bordered">
+         <thead>
+           <tr>
+             <th><h4>タイトル</h4></th>
+             <th><h4>本文</h4></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td><%= stress.title %></td>
+             <td><%= stress.body %></td>
+           </tr>
+         </tbody>
+         <% end %>
+       </table>
+     </div>
+  </div>
+</div>

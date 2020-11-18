@@ -1,0 +1,9 @@
+<h2>ストレスを吐き出す</h2>
+
+<%= form_with model:@stress, url:stresses_path, local:true do |f| %>
+<h4>タイトル</h4>
+<%= f.text_field :title %>
+<h4>本文</h4>
+<%= f.text_area :body %>
+<%= f.submit "投稿する" %>
+<% end %>

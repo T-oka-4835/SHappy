@@ -1,3 +1,10 @@
 // Place all the styles related to the stresses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//stressの一番上の画像
+.stress-index-picture > img {
+  width: 100%;
+  opacity: 0.95;
+  margin-top: 10px;
+}

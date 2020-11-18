@@ -10,11 +10,13 @@
   </head>
 
   <header>
-      <div class="header-word">SHappy</div>
+      <div class="header-word">
+        <%= link_to "SHappy", stresses_path %>
+      </div>
       <div class="header-container">
     <% if user_signed_in? %>
       <li class="header-nav">
-        <%= link_to 'マイページ', "#" %>
+        <%= link_to 'マイページ', user_path(current_user) %>
       </li>
       <li class="header-nav">
         <%= link_to 'ストレスを吐き出す', new_stress_path %>

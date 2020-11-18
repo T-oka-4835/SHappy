@@ -1,4 +1,5 @@
 class StressesController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @stresses = Stress.all
@@ -31,6 +32,9 @@ class StressesController < ApplicationController
   end
 
   def destroy
+    @stress = Stress.find(params[:id])
+    @stress.destroy
+    redirect_to stresses_path
   end
 
   private

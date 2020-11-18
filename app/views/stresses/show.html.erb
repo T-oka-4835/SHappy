@@ -9,12 +9,13 @@
   </thead>
   <tbody>
     <tr>
-      <td><% @stress.title %></td>
-      <td><% @stress.body %></td>
+      <td><%= @stress.title %></td>
+      <td><%= @stress.body %></td>
     </tr>
   </tbody>
+</table>
 
 <div><%= link_to "一覧に戻る", stresses_path %></div>
 <div><%= link_to "編集する", edit_stress_path(@stress) %></div>
-
+<div><%= link_to "削除する", stress_path(@stress), method: :delete, "data-confirm" => "このストレスを削除しますか？" %></div>
 

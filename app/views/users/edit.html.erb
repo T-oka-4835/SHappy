@@ -1,0 +1,21 @@
+<h2>マイページの編集</h2>
+
+ <%= form_with model: @user, url: user_path, method: :patch, local: true do |f| %>
+<div class="field form-word">
+    <%= f.label :"名前" %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field form-word">
+    <%= f.label :"電話番号" %><br />
+    <%= f.text_field :phonenumber, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field form-word">
+    <%= f.label :"メールアドレス" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <%= f.submit "編集する" %>
+
+  <% end %>

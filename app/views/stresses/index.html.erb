@@ -4,7 +4,19 @@
       <div class="stress-index-picture">
         <img src="take-it-easy-55e8d1414e_640.jpg">
       </div>
-      <h1>ここはindexページです</h1>
+
+      <table class="table table-bordered" style = "margin-top: 20px;">
+        <thead>
+          <tr>
+            <th>ニックネーム</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @user.name %></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
      <div class="col-lg-7">

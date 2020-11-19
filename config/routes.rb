@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root "homes#top"
   resources :stresses
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:index, :show, :edit, :update]
   get "releases/eat", "releases#eat"
   get "releases/buy", "releases#buy"
   get "releases/travel", "releases#travel"

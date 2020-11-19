@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+    @users = User.all
+    # @stress = Stress.find(params[:id])
+  end
+
   def show
     @user = User.find(params[:id])
   end

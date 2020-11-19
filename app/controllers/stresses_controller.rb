@@ -3,6 +3,7 @@ class StressesController < ApplicationController
 
   def index
     @stresses = Stress.all
+    @user = current_user
   end
 
   def show

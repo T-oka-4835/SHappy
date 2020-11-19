@@ -4,4 +4,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :stresses, dependent: :destroy
+  has_many :events
 end

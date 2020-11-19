@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   get "releases/laugh", "releases#laugh"
   get "releases/cry", "releases#cry"
   resources :releases, only: [:index]
+  resources :events, only: [:create, :update, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -39,6 +39,6 @@ class StressesController < ApplicationController
 
   private
   def stress_params
-    params.require(:stress).permit(:user, :title, :body)
+    params.require(:stress).permit(:user, :title, :body, :image)
   end
 end

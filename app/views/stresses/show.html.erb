@@ -3,12 +3,14 @@
 <table class="table table-bordered">
   <thead>
     <tr>
+      <th><h4>写真</h4></th>
       <th><h4>タイトル</h4></th>
       <th><h4>本文</h4></th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td style="width:10%"><%= attachment_image_tag @stress, :image, :fill, 30, 30, format: 'jpeg', fallback: "/minimalism-52e8d1454a_640.jpg", size:'200x150' %></td>
       <td><%= @stress.title %></td>
       <td><%= @stress.body %></td>
     </tr>

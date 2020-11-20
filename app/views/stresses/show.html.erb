@@ -21,3 +21,36 @@
 <div><%= link_to "編集する", edit_stress_path(@stress) %></div>
 <div><%= link_to "削除する", stress_path(@stress), method: :delete, "data-confirm" => "このストレスを削除しますか？" %></div>
 
+<li>
+  <i class="fa fa-comment"></i>
+  <a href="#comments"><%= @stress.post_comments.count %></a>
+</li>
+
+<div>
+  <h2><%= @stress.post_comments.count %>件コメント</h2>
+</div>
+
+<% if @post_comment.user == current_user %>
+  <div>
+    <%= link_to "削除", stress_post_comment_path(post_comment.stress, post_comment), method: :delete  %>
+  </div>
+<% end %>
+
+<ol>
+  <% @stress.post_comments.each do |post_comment| %>
+    <li class="comment">
+      <div class="comment-text">
+        <div class="comment-author clearfix">
+          <a href="#" class="link-author"><%= post_comment.user.name %></a>
+            <span class="comment-date"><%= post_comment.created_at.strftime('%Y/%m/%d') %></span>
+        </div>
+          <div><%= post_comment.comment %></div>
+      </div>
+    </li>
+  <% end %>
+</ol>
+
+  <%= form_with(model:[@stress, @post_comment], local: true) do |f| %>
+    <%= f.text_area :comment, class: "comment-form",placeholder: "コメントをここに" %>
+    <%= f.submit "送信する", class: "#" %>
+  <% end %>

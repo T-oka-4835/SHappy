@@ -8,6 +8,7 @@ class StressesController < ApplicationController
 
   def show
     @stress = Stress.find(params[:id])
+    @post_comment = PostComment.new
   end
 
   def new

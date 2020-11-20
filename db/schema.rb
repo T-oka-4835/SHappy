@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_19_144627) do
+ActiveRecord::Schema.define(version: 2020_11_20_023051) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 2020_11_19_144627) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+  end
+
+  create_table "post_comments", force: :cascade do |t|
+    t.text "comment"
+    t.integer "user_id"
+    t.integer "stress_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "stresses", force: :cascade do |t|

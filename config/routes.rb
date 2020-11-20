@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root "homes#top"
   resources :stresses do
     resources :post_comments, only: [:create, :destroy]
+    resource :favorites, only: [:create, :destroy]
   end
   resources :users, only: [:index, :show, :edit, :update]
   get "releases/eat" => "releases#eat"

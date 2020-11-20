@@ -2,7 +2,7 @@ class StressesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @stresses = Stress.all
+    @stresses = Stress.page(params[:page]).reverse_order
     @user = current_user
   end
 

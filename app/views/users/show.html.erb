@@ -1,3 +1,4 @@
+<% if @user == current_user %>
 <table class="table table-bordered">
   <tr>
     <th>ニックネーム</th><td><%= @user.name %></td>
@@ -9,9 +10,15 @@
     <th>メールアドレス</th><td><%= @user.email %></td>
   </tr>
 </table>
-
 <%= link_to "一覧に戻る", stresses_path %>
 <%= link_to "編集する", edit_user_path %>
+<% else %>
+<table class="table table-bordered">
+  <tr>
+    <th>ニックネーム</th><td><%= @user.name %></td>
+  </tr>
+</table>
+<% end %>
 
 <%= render 'users/follow', user: @user %>
 

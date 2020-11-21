@@ -1,22 +1,20 @@
-<h2>ログイン</h2>
+<div class="session-container">
+<h2 class="session-top">SHappyにログイン</h2>
 
 <%= form_with model: @user, url: user_session_path, local: true do |f| %>
-  <div class="field form-word">
-    <%= f.label :"ニックネーム" %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field form-word">
-    <%= f.label :"パスワード" %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field form-word">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+  <div class="field session-text">
+      <%= f.label :"ニックネーム" %><br />
+    <div class="form-word">
+      <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
     </div>
-  <% end %>
+  </div>
+
+  <div class="field session-text">
+      <%= f.label :"パスワード" %><br />
+    <div class="form-word">
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+  </div>
 
   <div class="actions">
     <%= f.submit "ログイン" %>
@@ -24,3 +22,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</div>

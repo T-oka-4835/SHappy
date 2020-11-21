@@ -1,4 +1,3 @@
-<h2>マイページ</h2>
 <table class="table table-bordered">
   <tr>
     <th>ニックネーム</th><td><%= @user.name %></td>
@@ -13,5 +12,30 @@
 
 <%= link_to "一覧に戻る", stresses_path %>
 <%= link_to "編集する", edit_user_path %>
+
+<h2>過去のストレス一覧</h2>
+ <table class="table table-bordered">
+   <thead>
+     <tr>
+       <th><h4>写真</h4></th>
+       <th><h4>タイトル</h4></th>
+       <th><h4>投稿日</h4></th>
+       <th></th>
+     </tr>
+   </thead>
+   <% @stresses.each do |stress| %>
+   <tbody>
+     <tr>
+       <td style="width:30%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpeg', fallback: "/minimalism-52e8d1454a_640.jpg", size:'200x150' %></td>
+       <td><%= stress.title %></td>
+       <td><%= stress.created_at %></td>
+       <td><%= link_to "詳細", stress_path(stress.id) %></td>
+     </tr>
+   </tbody>
+   <% end %>
+   <!--<= paginate @stresses %>-->
+ </table>
+
+
 
 

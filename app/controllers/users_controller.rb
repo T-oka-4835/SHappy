@@ -3,12 +3,14 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    # @events = Event.where(user_id: @user.id)
+    # @event = Event.new
   end
 
   def show
     @user = User.find(params[:id])
-    @events = Event.where(user_id: @user.id)
-    @event = Event.new
+    @stresses = @user.stresses
+    # @stresses = Stress.page(params[:page]).reverse_order
   end
 
   def edit

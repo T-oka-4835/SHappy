@@ -6,7 +6,11 @@ Rails.application.routes.draw do
     resources :post_comments, only: [:create, :destroy]
     resource :favorites, only: [:create, :destroy]
   end
-  resources :users, only: [:index, :show, :edit, :update]
+  resources :users, only: [:index, :show, :edit, :update] do
+    resource :relationships, only: [:create, :destroy]
+    get 'followings' => 'relationships#followings', as: 'followings'
+    get 'followers' => 'relationships#followers', as: 'followers'
+  end
   get "releases/eat" => "releases#eat"
   get "releases/buy" => "releases#buy"
   get "releases/travel" => "releases#travel"

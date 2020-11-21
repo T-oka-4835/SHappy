@@ -13,6 +13,8 @@
 <%= link_to "一覧に戻る", stresses_path %>
 <%= link_to "編集する", edit_user_path %>
 
+<%= render 'users/follow', user: @user %>
+
 <h2>過去のストレス一覧</h2>
  <table class="table table-bordered">
    <thead>

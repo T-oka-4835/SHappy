@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!
   def create
      @event = Event.new(event_params)
      @event.user_id = current_user.id

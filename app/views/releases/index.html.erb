@@ -1,32 +1,75 @@
 <div class="release-picture" >
   <img src="/hiking-57e0d6424c_640.jpg">
 </div>
-<h2>Stress発散する</h2>
 
-<div class="release-way">
-  <%= link_to "食べて発散", releases_eat_path %>
+<div class="stress-container">
+<h2 class="release-top">Stressを発散する</h2>
+
+<h4 class="stress-message">
+  ストレスを吐き出し、可視化することで、自分のストレスと客観的に向き合うことができます。<br>
+  しかし、時にはストレスが大きすぎたり、複数のストレスが重なることで、<br>
+  ストレスをため込んでしまうこともあると思います。<br>
+  <br>
+  そんな時は、自分に合った方法で、ストレスを発散しましょう！<br>
+  この下には、いくつかの発散方法を載せています。<br>
+  その時の気分に合わせて、発散方法を使い分けてください！
+</h4>
+
+<!--ストレス発散手段-->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="release-way">
+        <%= link_to "食べて発散", releases_eat_path %>
+      </div>
+        <%= link_to image_tag("/photo-1571309815192-4837ea73e4fb.jpeg", class:"release-stress-picture"), releases_eat_path %>
+    </div>
+    <div class="col-lg-3">
+      <div class="release-way">
+        <%= link_to "買って発散", releases_buy_path %>
+      </div>
+        <%= link_to image_tag("/photo-1534452203293-494d7ddbf7e0.jpeg", class:"release-stress-picture"), releases_cry_path %>
+    </div>
+    <div class="col-lg-3">
+      <div class="release-way">
+        <%= link_to "映画を観て発散", releases_watch_path %>
+      </div>
+        <%= link_to image_tag("/pexels-photo-3799125.jpeg", class:"release-stress-picture"), releases_watch_path %>
+    </div>
+    <div class="col-lg-3">
+      <div class="release-way">
+        <%= link_to "音楽を聞いて発散", releases_listen_path %>
+      </div>
+        <%= link_to image_tag("/pexels-photo-374703.jpeg", class:"release-stress-picture"), releases_listen_path %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="release-way">
+        <%= link_to "旅行で発散", releases_travel_path %>
+      </div>
+        <%= link_to image_tag("/80652197.jpeg", class:"release-stress-picture bottom-picture"), releases_travel_path %>
+    </div>
+    <div class="col-lg-4">
+      <div class="release-way">
+        <%= link_to "笑って発散", releases_laugh_path %>
+      </div>
+        <%= link_to image_tag("/photo-1472162072942-cd5147eb3902.jpeg", class:"release-stress-picture bottom-picture"), releases_laugh_path %>
+    </div>
+    <div class="col-lg-4">
+      <div class="release-way">
+        <%= link_to "泣いて発散", releases_cry_path %>
+      </div>
+        <%= link_to image_tag("/photo-1516758354783-b4ad206b7337.jpeg", class:"release-stress-picture bottom-picture"), releases_cry_path %>
+    </div>
+  </div>
 </div>
 
-<div class="release-way">
-  <%= link_to "買って発散", releases_buy_path %>
-</div>
 
-<div class="release-way">
-  <%= link_to "映画を観て発散", releases_watch_path %>
-</div>
 
-<div class="release-way">
-  <%= link_to "音楽を聞いて発散", releases_listen_path %>
-</div>
 
-<div class="release-way">
-  <%= link_to "旅行で発散", releases_travel_path %>
-</div>
 
-<div class="release-way">
-  <%= link_to "笑って発散", releases_laugh_path %>
-</div>
 
-<div class="release-way">
-   <%= link_to "泣いて発散", releases_cry_path %>
+
 </div>

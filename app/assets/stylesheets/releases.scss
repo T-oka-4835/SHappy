@@ -9,3 +9,42 @@
   height: 100%;
   width: 100%;
 }
+
+//ストレス発散ページ
+.stress-container {
+  text-align: center;
+}
+
+.release-top {
+  font-size: 40px;
+  margin: 100px 0 70px;
+}
+
+.stress-message {
+  margin: 0 auto;
+  width: 80%;
+  height: 200px;
+  background-color: #003366;
+  padding-top: 30px;
+  border-radius: 20px;
+  margin-bottom: 70px;
+}
+
+.release-way {
+  font-size: 25px;
+  background-color: #003366;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+//ストレス発散画像
+.release-stress-picture{
+  width: 280px;
+  height: 200px;
+  display: block;
+  margin-bottom: 70px;
+}
+
+.bottom-picture {
+  margin: 0 auto 70px;
+}

@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @user = User.find(params[:id])
     # @events = Event.where(user_id: @user.id)
     # @event = Event.new
   end
@@ -25,7 +26,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :email, :phonenumber)
+    params.require(:user).permit(:name, :email, :phonenumber, :profile_image)
   end
 
 end

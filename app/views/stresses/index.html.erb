@@ -6,14 +6,12 @@
       </div>
 
       <table class="table table-bordered sidebar-table" >
-        <thead>
-          <tr>
-            <th>ニックネーム</th>
-          </tr>
-        </thead>
         <tbody>
           <tr>
-            <td><%= @user.name %></td>
+            <td><%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', class: "profile-picture", fallback: "/smiley-54e9d24a4b_640.jpg" %></td>
+          </tr>
+          <tr>
+            <td>ニックネーム: <%= @user.name %></td>
           </tr>
           <tr>
             <td><%= link_to "自分がフォロー中のUser: #{@user.followings.count}人", user_followings_path(@user) %></td>

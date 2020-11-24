@@ -1,6 +1,9 @@
 <% if @user == current_user %>
 <table class="table table-bordered">
   <tr>
+    <th>プロフィール画像</th><td><%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', class: "profile-picture", fallback: "/smiley-54e9d24a4b_640.jpg" %></td>
+  </tr>
+  <tr>
     <th>ニックネーム</th><td><%= @user.name %></td>
   </tr>
   <tr>

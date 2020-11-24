@@ -22,3 +22,64 @@
   margin-bottom: 20px;
 }
 
+// ストレス投稿ページ
+.stress-new-container {
+  margin-left: 130px;
+}
+
+.new-title {
+  margin-bottom: 30px;
+}
+
+.title-form {
+  width: 250px;
+}
+
+.content-form {
+  width: 400px;
+  height: 150px;
+}
+
+.new-submit {
+  margin-top: 20px;
+  margin-left: 330px;
+  background-color: #005500;
+}
+
+.new-file {
+  margin-top: 10px;
+}
+
+// ストレス発散ページ
+.stress-container {
+  text-align: center;
+}
+
+.release-top {
+  font-size: 40px;
+  margin: 100px 0 70px;
+}
+
+.stress-message {
+  margin: 0 auto;
+  width: 80%;
+  height: 200px;
+  background-color: #003366;
+  padding-top: 30px;
+  border-radius: 20px;
+  margin-bottom: 70px;
+}
+
+.release-way {
+  font-size: 25px;
+  background-color: #003366;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.release-picture-top {
+  width: 280px;
+  height: 200px;
+  display: block;
+  margin-bottom: 70px;
+}

@@ -5,10 +5,10 @@
         <img src="take-it-easy-55e8d1414e_640.jpg">
       </div>
 
-      <table class="table table-bordered sidebar-table" >
+      <table class="table table-bordered sidebar-table" style="width: 70%;">
         <tbody>
-          <tr>
-            <td><%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', class: "profile-picture", fallback: "/smiley-54e9d24a4b_640.jpg" %></td>
+          <tr style="text-align: center;">
+            <td><%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', class:"profile-picture", fallback: "/smiley-54e9d24a4b_640.jpg" %></td>
           </tr>
           <tr>
             <td>ニックネーム: <%= @user.name %></td>

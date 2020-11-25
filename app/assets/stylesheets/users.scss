@@ -13,6 +13,8 @@
   font-size: 20px;
   background-color: #003366;
   margin-bottom: 40px;
+  text-align: center;
+  width: 70%;
 }
 
 // マイページ編集ページ
@@ -31,4 +33,13 @@
 .edit-profile-submit {
   background-color: #191970;
   margin-left: 170px;
+}
+
+//Userのindexページ
+.user-index-container {
+  margin-left: 130px;
+}
+
+.all-users {
+  margin-bottom: 30px;
 }

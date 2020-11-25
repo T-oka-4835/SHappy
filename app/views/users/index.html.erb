@@ -1,18 +1,22 @@
-<h2>User一覧</h2>
-<table>
+<div class="user-index-container">
+<h2 class="all-users">User一覧</h2>
+<table class="table table-bordered sidebar-table" style="width: 50%;">
  <thead>
    <tr>
-     <th></th>
      <th><h4>写真</h4></th>
      <th><h4>ニックネーム</h4></th>
+     <th><h4>過去のストレス数</h4></th>
    </tr>
  </thead>
 <% @users.each do |user| %>
 　<tbody>
    <tr>
-     <td></td>
+     <td><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', class:"profile-picture", fallback: "/smiley-54e9d24a4b_640.jpg" %></td>
      <td><%= link_to user.name, user_path(user) %></td>
+     <td><%= user.stresses.count %>個</td>
    </tr>
 　</tbody>
 <% end %>
 </table>
+<%= paginate @users %>
+</div>

@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @users = User.all
+    @users = User.page(params[:page]).reverse_order
     # @events = Event.where(user_id: @user.id)
     # @event = Event.new
   end

@@ -5,6 +5,7 @@
         <img src="take-it-easy-55e8d1414e_640.jpg">
       </div>
 
+<!--サイドバー-->
       <table class="table table-bordered sidebar-table" style="width: 70%;">
         <tbody>
           <tr style="text-align: center;">
@@ -24,7 +25,6 @@
         <div class="user-find">
           <%= link_to "他のユーザーを探す", users_path, class: "user-find" %>
         </div>
-
 <!--カレンダー  -->
       <%= render 'stresses/index', user: @user, event: @event %>
 <!--カレンダー  -->
@@ -36,6 +36,7 @@
          <thead>
            <tr>
              <th><h4>写真</h4></th>
+             <th><h4>ユーザー名</h4></th>
              <th><h4>タイトル</h4></th>
              <th><h4>投稿日</h4></th>
              <th></th>
@@ -45,14 +46,15 @@
          <tbody>
            <tr>
              <td style="width:30%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpeg', fallback: "/minimalism-52e8d1454a_640.jpg", size:'200x150' %></td>
+             <td><%= stress.user.name %></td>
              <td><%= stress.title %></td>
              <td><%= stress.created_at %></td>
              <td><%= link_to "詳細", stress_path(stress.id) %></td>
            </tr>
          </tbody>
          <% end %>
-         <%= paginate @stress %>
        </table>
+       <%= paginate @stress %>
      </div>
   </div>
 </div>

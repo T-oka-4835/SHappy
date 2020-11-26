@@ -2,7 +2,7 @@
 
 <table class="table table-bordered">
   <thead>
-    <tr id="stress_<%= @stress.id %>">
+    <tr>
       <th><h4>写真</h4></th>
       <th><h4>タイトル</h4></th>
       <th><h4>本文</h4></th>
@@ -16,12 +16,15 @@
     </tr>
   </tbody>
 </table>
-
 <div><%= link_to "一覧に戻る", stresses_path %></div>
 <div><%= link_to "編集する", edit_stress_path(@stress) %></div>
 <div><%= link_to "削除する", stress_path(@stress), method: :delete, "data-confirm" => "このストレスを削除しますか？" %></div>
 
-<%= render "favorites/favorite-btn", stress: @stress %> 
+<div id="stress_<%= @stress.id %>">
+  <div class="favorite-btn">
+    <%= render "favorites/favorite-btn", stress: @stress %>
+  </div>
+</div>
 
 <li>
   <i class="fa fa-comment"></i>

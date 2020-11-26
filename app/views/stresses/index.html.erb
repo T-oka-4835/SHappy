@@ -27,10 +27,11 @@
 
 <!--カレンダー  -->
       <%= render 'stresses/index', user: @user, event: @event %>
+<!--カレンダー  -->
     </div>
 
      <div class="col-lg-7">
-       <h2 class="past-stress">過去のストレス</h2>
+       <h2 class="past-stress"><%= @user.name %>さんと、フォローしたユーザーのストレス</h2>
        <table class="table table-bordered">
          <thead>
            <tr>
@@ -50,7 +51,7 @@
            </tr>
          </tbody>
          <% end %>
-         <%= paginate @stresses %>
+         <%= paginate @stress %>
        </table>
      </div>
   </div>

@@ -163,17 +163,20 @@ thead > tr {
   width   : 30px;
   height  : 2px ;
   left    : 6px;
-  background : #555;
+  background : white;
   -webkit-transition: 0.5s ease-in-out;
   -moz-transition   : 0.5s ease-in-out;
   transition        : 0.5s ease-in-out;
 }
+
 .hamburger span:nth-child(1) {
   top: 10px;
 }
+
 .hamburger span:nth-child(2) {
   top: 20px;
 }
+
 .hamburger span:nth-child(3) {
   top: 30px;
 }
@@ -213,6 +216,7 @@ nav.globalMenuSp ul {
   margin: 0 auto;
   padding: 0;
   width: 100%;
+  background-color: #EEEEEE;
 }
 
 nav.globalMenuSp ul li {
@@ -221,10 +225,12 @@ nav.globalMenuSp ul li {
   width: 100%;
   border-bottom: 1px solid #fff;
 }
+
 nav.globalMenuSp ul li:last-child {
   padding-bottom: 0;
   border-bottom: none;
 }
+
 nav.globalMenuSp ul li:hover{
   background :#ddd;
 }
@@ -236,7 +242,6 @@ nav.globalMenuSp ul li a {
   text-decoration :none;
 }
 
-/* このクラスを、jQueryで付与・削除する */
 nav.globalMenuSp.active {
   transform: translateY(0%);
 }

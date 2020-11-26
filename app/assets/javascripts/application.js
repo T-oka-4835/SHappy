@@ -20,6 +20,7 @@
 //= require_tree .
 
 //Topに戻るボタン
+document.addEventListener("turbolinks:load", function() {
 $(function() {
   $('.back a').on('click',function(event){
     $('body, html').animate({
@@ -28,9 +29,11 @@ $(function() {
     event.preventDefault();
   });
 });
+})
 
 // ハンバーガー
-$(function() {
+document.addEventListener("turbolinks:load", function() {
+  $(function() {
   $('.hamburger').click(function() {
     $(this).toggleClass('active');
 
@@ -41,3 +44,5 @@ if ($(this).hasClass('active')) {
 }
   });
 });
+})
+

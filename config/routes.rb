@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get 'followings' => 'relationships#followings', as: 'followings'
     get 'followers' => 'relationships#followers', as: 'followers'
   end
+  # ストレス発散ページ
   get "releases/eat" => "releases#eat"
   get "releases/buy" => "releases#buy"
   get "releases/travel" => "releases#travel"
@@ -19,6 +20,11 @@ Rails.application.routes.draw do
   get "releases/laugh" => "releases#laugh"
   get "releases/cry" => "releases#cry"
   resources :releases, only: [:index]
+  # カレンダー
   resources :events, only: [:create, :update, :destroy]
+  # ゲストログイン
+  devise_scope :user do
+    post 'users/guest_sign_in' => 'users/sessions#new_guest'
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

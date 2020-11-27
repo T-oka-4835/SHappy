@@ -14,7 +14,7 @@
     「ストレスを体に悪いと思う人にとっては、ストレスは体に悪い」<br>
     という研究結果が出ています。
     </h4>
-    <span style="font-size: 20px">
+    <span style="font-size: 25px">
     このアプリは、ストレスの捉え方を変え、<br>
     ユーザーの幸せをふやすことを目指しています。
     </span>
@@ -71,6 +71,20 @@
         </p>
       </div>
     </div>
+  </div>
+</div>
+</div>
+
+<!--新規登録と、ゲストログイン-->
+<div class="top-login">
+  <div class="top-registration-btn">
+    <%= link_to "新規登録はこちら", new_user_registration_path, class: 'btn btn-success' %>
+  </div>
+   <div class="top-session-btn">
+    <%= link_to "ログインはこちら", new_user_session_path, class: 'btn btn-warning' %>
+  </div>
+  <div class="top-guest-btn">
+    <%= link_to "ゲストログイン", users_guest_sign_in_path, class: 'btn btn-danger', method: :post %>
   </div>
 </div>
 

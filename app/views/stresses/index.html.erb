@@ -31,7 +31,13 @@
     </div>
 
      <div class="col-lg-7">
-       <h2 class="past-stress"><%= @user.name %>さんと、フォローしたユーザーのストレス</h2>
+<!--ゲストユーザーと、通常ログインで表示変更-->
+       <% if @user == User.guest %>
+           <h2 class="past-stress">ゲストさんと、フォローしたユーザーのストレス</h2>
+       <% else %>
+           <h2 class="past-stress"><%= @user.name %>さんと、フォローしたユーザーのストレス</h2>
+       <% end %>
+<!--ゲストユーザーと、通常ログインで表示変更-->
        <table class="table table-bordered">
          <thead>
            <tr>

@@ -36,6 +36,21 @@
   margin-bottom: 30px;
 }
 
+// トップページの、登録とログインボタン
+.top-login {
+  margin: 70px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.top-registration-btn {
+  margin-right: 50px;
+}
+
+.top-guest-btn {
+  margin-left: 50px;
+}
+
 //Topに戻るボタン
 .back {
   position: fixed;

@@ -43,11 +43,16 @@
 .new-submit {
   margin-top: 20px;
   margin-left: 330px;
-  background-color: #191970;
+  background-color: orange;
 }
 
 .new-file {
   margin-top: 10px;
+}
+
+// ストレス詳細ページ
+.comment-submit {
+  background-color: orange;
 }
 
 // ストレス編集ページ
@@ -57,6 +62,10 @@
 
 .stress-edit-title {
   margin-bottom: 30px;
+}
+
+.edit-submit {
+  background-color: orange;
 }
 
 // ストレス発散ページ

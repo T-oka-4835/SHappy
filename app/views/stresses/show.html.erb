@@ -27,17 +27,14 @@
   </div>
 </div>
 <!--コメント機能-->
-<li>
-  <i class="fa fa-comment"></i>
-  <a href="#comments"><%= @stress.post_comments.count %></a>
-</li>
 <div>
-  <h2><%= @stress.post_comments.count %>件コメント</h2>
+  <i class="fa fa-comment"></i>
+  <a href="#comments"><%= @stress.post_comments.count %>件コメント</a>
 </div>
 
-<ol>
+<div>
   <% @stress.post_comments.each do |post_comment| %>
-    <li class="comment">
+    <div class="comment">
       <div class="comment-text">
         <div class="comment-author clearfix">
           <a href="#" class="link-author"><%= post_comment.user.name %></a>
@@ -45,14 +42,14 @@
         </div>
           <div><%= post_comment.comment %></div>
       </div>
-    </li>
+    </div>
      <div>
        <%= link_to "削除", stress_post_comment_path(post_comment.stress, post_comment), method: :delete, class: "btn btn-danger" %>
      </div>
   <% end %>
-</ol>
+</div>
 
   <%= form_with model:[@stress, @post_comment] do |f| %>
     <%= f.text_area :comment, class: "comment-form",placeholder: "コメントをここに" %>
-    <%= f.submit "送信する", class: "#" %>
+    <%= f.submit "送信する", class: "comment-submit btn" %>
   <% end %>

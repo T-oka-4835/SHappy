@@ -19,7 +19,7 @@ class EventsController < ApplicationController
     @user = User.find(params[:id])
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to stress_path(@stress)
+    redirect_to stresses_path
   end
 
   private

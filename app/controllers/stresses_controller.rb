@@ -2,13 +2,14 @@ class StressesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    # @stresses = Stress.page(params[:page]).reverse_order
     #フォローしたユーザーの投稿のみ表示
     user_ids = current_user.followings.pluck(:id) # フォローしているユーザーのid一覧
     user_ids.push(current_user.id) # 自身のidを一覧に追加する
     @stresses = Stress.where(user_id: user_ids).order(created_at: :desc)
     @user = current_user
     @stress = @stresses.page(params[:page]).reverse_order
+    @events = Event.where(user_id: @user.id)
+    @event = Event.new
   end
 
   def show

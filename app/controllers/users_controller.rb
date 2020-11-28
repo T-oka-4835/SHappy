@@ -3,8 +3,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.page(params[:page]).reverse_order
-    # @events = Event.where(user_id: @user.id)
-    # @event = Event.new
   end
 
   def show

@@ -15,6 +15,7 @@ class StressesController < ApplicationController
   def show
     @stress = Stress.find(params[:id])
     @post_comment = PostComment.new
+    @user = current_user
   end
 
   def new

@@ -17,8 +17,10 @@
   </tbody>
 </table>
 <div><%= link_to "一覧に戻る", stresses_path %></div>
+<% if @stress.user == current_user %>
 <div><%= link_to "編集する", edit_stress_path(@stress) %></div>
 <div><%= link_to "削除する", stress_path(@stress), method: :delete, "data-confirm" => "このストレスを削除しますか？" %></div>
+<% end %>
 
 <!--いいね機能-->
 <div id="stress_<%= @stress.id %>">

@@ -1,3 +1,1 @@
-$("#stress_<%= @stress.id %> .comments-count").html("コメント数: <%= @stress.stress_comments.count %>");
-$(".stress_comments").html("<%= j(render 'stress/show') %>");
-$("#stress_comment_comment").val("");
+$('.comment_<%= @stress.id %>').html("<%= j(render partial: 'post_comments/post-comments', locals: {stress: @stress, post_comment: @post_comment, comments: @comments}) %>");

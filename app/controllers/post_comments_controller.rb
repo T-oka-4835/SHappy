@@ -6,6 +6,7 @@ class PostCommentsController < ApplicationController
     @comment = current_user.post_comments.new(post_comment_params)
     @comment.stress_id = @stress.id
     @comment.save
+    @comments = @stress.comments
   end
 
   def destroy

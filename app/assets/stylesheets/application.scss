@@ -152,6 +152,7 @@ thead > tr {
   margin-bottom: 10px;
 }
 
+// サイト紹介のCSS
 .message-background {
   margin: 0 auto;
   width: 80%;
@@ -159,28 +160,69 @@ thead > tr {
   background-color: #003366;
   padding: 20px 0 0 60px;
   border-radius: 20px;
-  margin-bottom: 70px;
 }
 
 .release-stress-title {
   text-align: center;
   text-decoration: underline;
+  margin: 100px 0;
 }
 
 .release-sites {
   margin-top: 50px;
 }
 
+.site-background {
+  width: 60%;
+  height: 100%;
+  background-color: #003366;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
 .site-name {
-  font-size: 20px;
-  margin: 50px 0 20px 130px;
+  font-size: 25px;
+  margin: 100px 0 30px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.company-picture-container {
+  text-align: center;
 }
 
 .company-picture {
-  width: 50px;
-  height: 50px;
+  width: 50%;
+  height: 50%;
   display: inline;
-  margin-left: 150px;
+}
+
+.site-intro {
+  text-align: center;
+  margin: 30px 0 50px;
+  font-size: 18px;
+}
+
+// サイトのボタンのCSS
+.site-button {
+  margin: 30px 0 50px;
+  display       : inline-block;
+  border-radius : 5%;
+  font-size     : 22pt;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 12px 12px;
+  background    : rgba(0, 179, 0, 0.95);
+  color         : #ffffff;
+  line-height   : 1em;
+  transition    : .3s;
+  box-shadow    : 2px 2px 11px #666666;
+  border        : 2px solid rgba(0, 179, 0, 0.95);
+}
+.site-button:hover {
+  box-shadow    : none;
+  color         : rgba(0, 179, 0, 0.95);
+  background    : #ffffff;
 }
 
 // ハンバーガー

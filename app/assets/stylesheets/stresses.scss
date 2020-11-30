@@ -3,8 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 //stressの一番上の画像
+.top-index-picture {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.top-index-image {
+  width: 45%;
+  height: 45%;
+  padding: 50px;
+  background-color: #003366;
+  border-radius: 20px;
+}
+
+//サイドバー 上部の写真
+.stress-index-picture {
+  text-align: center;
+}
+
 .stress-index-picture > img {
-  width: 100%;
+  width: 80%;
+  height: 200px;
   opacity: 0.95;
   margin-top: 40px;
 }
@@ -19,6 +38,7 @@
 }
 
 .past-stress {
+  padding-top: 15px;
   margin-bottom: 20px;
 }
 

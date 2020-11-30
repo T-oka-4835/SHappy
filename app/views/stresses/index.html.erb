@@ -41,7 +41,7 @@
        <table class="table table-bordered">
          <thead>
            <tr>
-             <th><h4>写真</h4></th>
+             <th><h4>気持ち</h4></th>
              <th><h4>ユーザー名</h4></th>
              <th><h4>タイトル</h4></th>
              <th><h4>投稿日</h4></th>
@@ -51,10 +51,10 @@
          <% @stresses.each do |stress| %>
          <tbody>
            <tr>
-             <td style="width:30%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpeg', fallback: "/minimalism-52e8d1454a_640.jpg", size:'200x150' %></td>
+             <td style="width:25%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpeg', fallback: "/minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
              <td><%= stress.user.name %></td>
              <td><%= stress.title %></td>
-             <td><%= stress.created_at %></td>
+             <td><%= stress.created_at.to_s(:datetime_jp) %></td>
              <td><%= link_to "詳細", stress_path(stress.id) %></td>
            </tr>
          </tbody>

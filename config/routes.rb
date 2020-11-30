@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'releases/index'
   devise_for :users
   root "homes#top"
+  get   'inquiry'         => 'inquiry#index'
+  post  'inquiry/confirm' => 'inquiry#confirm'
+  post  'inquiry/thanks'  => 'inquiry#thanks'
   resources :stresses do
     resources :post_comments, only: [:create, :destroy]
     resource :favorites, only: [:create, :destroy]

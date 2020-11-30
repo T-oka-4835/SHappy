@@ -4,7 +4,7 @@ class EventsController < ApplicationController
      @event = Event.new(event_params)
      @event.user_id = current_user.id
      @event.save!
-     redirect_to stress_path(current_user.id)
+     redirect_to stresses_path
      @events = Event.where(user_id: current_user.id)
   end
 
@@ -12,7 +12,7 @@ class EventsController < ApplicationController
      @event = Event.find(params[:id])
      @events = Event.where(user_id: current_user.id)
      @event.updaet(event_params)
-     redirect_to stress_path(@stress)
+     redirect_to stresses_path
   end
 
   def destroy

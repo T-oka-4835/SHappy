@@ -1,3 +1,14 @@
 // Place all the styles related to the relationships controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.relation-title {
+  margin: 30px 0 30px 130px;
+  font-size: 35px;
+  display: inline-block;
+  background-color: #003366;
+}
+
+.relation-table {
+  margin: 0 auto;
+}

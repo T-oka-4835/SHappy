@@ -1,20 +1,22 @@
-<h2>自分をフォロー中のUser</h2>
-<table class="table table-hover table-inverse">
+<div class="relation-title">
+  <h2>自分をフォロー中のUser</h2>
+</div>
+
+<table class="table table-bordered relation-table" style="width: 40%;">
   <thead>
     <tr>
       <th>写真</th>
       <th>ニックネーム</th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
     <% if @users.exists? %>
       <% @users.each do |user| %>
         <tr>
-          <td></td>
+          <td><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', class:"profile-picture", fallback: "/smiley-54e9d24a4b_640.jpg" %></td>
           <td><%= link_to user.name, user_path(user) %></td>
-          <td></td>
         </tr>
       <% end %>
     <% end %>
   </tbody>
+  </table>

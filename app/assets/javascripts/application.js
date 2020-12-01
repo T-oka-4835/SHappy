@@ -10,15 +10,14 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require jquery
 //= require moment
 //= require fullcalendar
 //= require bootstrap-sprockets
 //= require_tree .
-
 //Topに戻るボタン
 document.addEventListener("turbolinks:load", function() {
 $(function() {
@@ -46,3 +45,37 @@ if ($(this).hasClass('active')) {
 });
 })
 
+$(document).on('turbolinks:load', () => {
+   $('#calendar').fullCalendar ({
+      header: {
+      left: 'prev,next today',
+      center: 'month,agendaWeek,agendaDay',
+      right: 'title'
+            },
+            
+      buttonText: {
+      prev: "<",
+      next: ">"
+            },
+
+      timezone: 'UTC',
+      events: '/stresses.json',
+      navLinks: true,
+      selectable: true,
+      selectHelper: true,
+      // 日付クリック
+    dayClick : function ( date , jsEvent , view ) {
+       $('#inputScheduleForm').modal('show');
+           },
+
+      // event クリックで編集、削除
+    eventClick : function(event, jsEvent , view) {
+       jsEvent.preventDefault();
+         $(`#inputScheduleEditForm${event.id}`).modal('show');
+          },
+
+    eventMouseover : function(event, jsEvent , view) {
+       jsEvent.preventDefault();
+          }
+        })
+  })

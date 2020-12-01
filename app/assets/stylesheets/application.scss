@@ -339,3 +339,45 @@ nav.globalMenuSp.active {
   margin-left: 50px;
   width: 70%;
 }
+
+// お問い合わせのレイアウト
+.inquiry-container {
+ text-align: center;
+}
+
+.inquiry-head {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.inquiry-text {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.inquiry-box {
+  margin-bottom: 20px;
+}
+
+.inquiry-message {
+  margin-bottom: 10px;
+}
+
+.inquiry-message > textarea {
+  width: 300px;
+  height: 150px;
+}
+
+.confirm-info {
+  margin-bottom: 20px;
+}
+
+.thanks-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.inquiry-picture {
+  text-align: center;
+  margin-bottom: 50px;
+}

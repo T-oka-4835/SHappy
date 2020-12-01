@@ -43,6 +43,9 @@
           <%= link_to 'ストレスを発散する', releases_path %>
         </li>
         <li>
+          <%= link_to "お問い合わせ", inquiry_path %>
+        </li>
+        <li>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         </li>
       </ul>
@@ -65,6 +68,9 @@
         </li>
         <li>
           <%= link_to "ログイン", new_user_session_path %>
+        </li>
+        <li>
+          <%= link_to "お問い合わせ", inquiry_path %>
         </li>
       </ul>
     <% end %>

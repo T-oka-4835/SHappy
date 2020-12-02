@@ -26,5 +26,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     post 'users/guest_sign_in' => 'users/sessions#new_guest'
   end
+  # 通知機能
+  resources :notifications, only: :index
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

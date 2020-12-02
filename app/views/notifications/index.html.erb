@@ -1,0 +1,28 @@
+
+<h2 class="notification-top">通知</h2>
+
+<div class="notification-container">
+  <table class="table notification-table" style="width: 40%;">
+    <% @notifications.each do |notification| %>
+      <tr>
+        <td>
+          <%= notification.visitor.name %>さんが
+          <% case notification.action %>
+            <% when 'follow' then %>
+              <%= "あなたをフォローしました" %>
+
+            <% when "comment" then %>
+              <% if notification.stress.user.id == current_user.id %>
+                <%= link_to "あなたの投稿", stress_path(notification.stress) %>
+                にコメントしました
+              <% end %>
+
+            <% when "favorite" then %>
+              <%= link_to "あなたの投稿", stress_path(notification.stress) %>
+                にいいねしました
+            <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

@@ -22,8 +22,6 @@ Rails.application.routes.draw do
   get "releases/laugh" => "releases#laugh"
   get "releases/cry" => "releases#cry"
   resources :releases, only: [:index]
-  # カレンダー
-  resources :events, only: [:create, :update, :destroy]
   # ゲストログイン
   devise_scope :user do
     post 'users/guest_sign_in' => 'users/sessions#new_guest'

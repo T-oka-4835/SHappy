@@ -8,8 +8,6 @@ class StressesController < ApplicationController
     @stresses = Stress.where(user_id: user_ids).order(created_at: :desc)
     @user = current_user
     @stress = @stresses.page(params[:page]).reverse_order
-    @events = Event.where(user_id: @user.id)
-    @event = Event.new
   end
 
   def show

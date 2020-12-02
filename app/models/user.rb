@@ -7,7 +7,6 @@ class User < ApplicationRecord
 
   has_many :stresses, dependent: :destroy
   has_many :post_comments, dependent: :destroy
-  has_many :events, dependent: :destroy
   has_many :favorites, dependent: :destroy
   #フォロー、フォロワー機能
   has_many :reverse_of_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy

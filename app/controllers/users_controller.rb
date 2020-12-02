@@ -8,7 +8,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @stresses = @user.stresses
-    # @stresses = Stress.page(params[:page]).reverse_order
   end
 
   def edit

@@ -1,7 +1,8 @@
 <div class="relation-title">
-  <h2>自分がフォロー中のUser</h2>
+  <h2>自分がフォロー中のユーザー</h2>
 </div>
 
+<% if @users.exists? %>
 <table class="table table-bordered  relation-table" style="width: 40%;">
   <thead>
     <tr>
@@ -10,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    <% if @users.exists? %>
+
       <% @users.each do |user| %>
         <tr>
           <td><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', class:"profile-picture", fallback: "/smiley-54e9d24a4b_640.jpg" %></td>
@@ -18,7 +19,12 @@
         </tr>
       <% end %>
     <% else %>
-        <p>ユーザーはいません</p>
+      <div class="no-user">
+        <p>自分がフォロー中のユーザーはいません</p>
+      </div>
+      <div class="no-user-picture">
+        <img src="/sayhello.jpeg">
+      </div>
     <% end %>
   </tbody>
 </table>

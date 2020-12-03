@@ -36,7 +36,7 @@
           <%= link_to 'マイページ', user_path(current_user) %>
         </li>
         <li>
-          <%= link_to 'ストレスを吐き出す', new_stress_path %>
+          <%= link_to 'ストレスを吐き出す', new_stress_path, data: {"turbolinks" => false} %>
         </li>
         <li>
           <%= link_to 'ストレスを発散する', releases_path %>

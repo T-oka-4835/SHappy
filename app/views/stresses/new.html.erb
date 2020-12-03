@@ -16,10 +16,11 @@
         <%= f.text_area :body, class:"content-form" %>
       </div>
     <h4>今の気分</h4>
-       <div class="stress-picture">
-         <%= attachment_image_tag @stress, :image, :fill, 60, 60, format: 'jpeg', fallback: "/minimalism-52e8d1454a_640.jpg", size:'200x150' %>
-         <%= f.attachment_field :image, plaveholder:"ストレス画像", class:"new-file" %>
+      <div style="margin: 20px 450px 20px 0;">
+        <%= attachment_image_tag @stress, :image, fallback: "/minimalism-52e8d1454a_640.jpg", format: 'jpeg', size:'200x150', onChange: "$('.img_field').change()", class: 'center-block img_prev'%>
+      </div>
+         <%= f.attachment_field :image, class: 'img_field' %>
          <%= f.submit "吐き出す", class:"new-submit btn" %>
-       </div>
+
   <% end %>
 </div>

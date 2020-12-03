@@ -44,11 +44,11 @@
 
 // ストレス投稿ページ
 .stress-new-container {
-  margin-left: 130px;
+  margin-left: 200px;
 }
 
 .new-title {
-  margin-bottom: 30px;
+  margin: 50px 0 30px;
 }
 
 .title-form {
@@ -63,11 +63,25 @@
 .new-submit {
   margin-top: 20px;
   margin-left: 330px;
-  background-color: orange;
+  background-color: green;
 }
 
 .new-file {
   margin-top: 10px;
+}
+
+.new-picture {
+  text-align: center;
+}
+
+.scream-picture {
+  width: 30%;
+  height: 30%;
+  margin: 50px;
+}
+
+.new-stress-form {
+  margin-left: 450px;
 }
 
 // ストレス詳細ページ

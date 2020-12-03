@@ -4,12 +4,21 @@
 
 .notification-top {
   font-size: 30px;
-  margin: 30px 0 40px 200px;
+  margin: 30px 0 40px 250px;
+}
+
+.notification-picture {
+  text-align: center;
+  margin-top: 70px;
 }
 
 .notification-container {
-  margin-top: 20px;
-  text-align: center;
+  background-color: #003366;
+  padding: 50px 0;
+  display: block;
+  width: 70%;
+  margin: 20px auto 0;
+  border-radius: 20px;
 }
 
 .notification-table {

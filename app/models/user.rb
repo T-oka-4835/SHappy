@@ -26,7 +26,7 @@ class User < ApplicationRecord
       notification.save if notification.valid?
     end
   end
-  
+
   def follow(user_id)
     relationships.create(followed_id: user_id)
   end

@@ -8,7 +8,6 @@
       <div class="stress-index-picture">
         <img src="photo-1536778215133-7e02ee89cb90.jpeg">
       </div>
-
 <!--サイドバー-->
       <table class="table table-bordered sidebar-table" style="width:70%; margin-left: 60px;">
         <tbody>
@@ -24,19 +23,19 @@
           <tr>
             <td><%= link_to "自分をフォロー中のUser: #{@user.followers.count}人", user_followers_path(@user) %></td>
           </tr>
-        </tbody>
-      </table>
-        <div class="user-find">
-          <%= link_to "他のユーザーを探す", users_path, class:"user-find" %>
-        </div>
+         </tbody>
+       </table>
+           <div class="user-find">
+             <%= link_to "他のユーザーを探す", users_path, class:"user-find" %>
+           </div>
     </div>
 
      <div class="col-lg-7">
 <!--ゲストユーザーと、通常ログインで表示変更-->
        <% if @user == User.guest %>
-           <h2 class="past-stress">ゲストさんと、フォローしたユーザーのストレス</h2>
+         <h2 class="past-stress">ゲストさんと、フォローしたユーザーのストレス</h2>
        <% else %>
-           <h2 class="past-stress"><%= @user.name %>さんと、フォローしたユーザーのストレス</h2>
+         <h2 class="past-stress"><%= @user.name %>さんと、フォローしたユーザーのストレス</h2>
        <% end %>
 <!--ゲストユーザーと、通常ログインで表示変更-->
        <table class="table table-bordered">

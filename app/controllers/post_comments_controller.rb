@@ -8,7 +8,7 @@ class PostCommentsController < ApplicationController
     @comment.save
     # 通知機能
     @stress.create_notification_post_comment!(current_user, @comment.id)
-    @comments = @stress.comments
+    @comments = @stress.comment
   end
 
   def destroy

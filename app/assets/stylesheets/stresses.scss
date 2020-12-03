@@ -86,20 +86,35 @@
 
 // ストレス詳細ページ
 .comment-submit {
-  background-color: orange;
+  background-color: green;
 }
 
 // ストレス編集ページ
 .stress-edit-container {
-  margin-left: 130px;
+  margin-left: 200px;
 }
 
 .stress-edit-title {
-  margin-bottom: 30px;
+  margin: 50px 0 30px;
 }
 
 .edit-submit {
-  background-color: orange;
+  background-color: green;
+  margin-left: 330px;
+}
+
+.edit-picture {
+  text-align: center;
+}
+
+.think-picture {
+  width: 30%;
+  height: 30%;
+  margin: 50px;
+}
+
+.edit-stress-form {
+  margin-left: 450px;
 }
 
 // ストレス発散ページ

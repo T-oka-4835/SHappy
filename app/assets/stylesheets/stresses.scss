@@ -87,6 +87,32 @@
 // ストレス詳細ページ
 .comment-submit {
   background-color: green;
+  margin: 70px 50px 0 0;
+}
+
+.stress-show-container {
+  margin-left: 200px;
+}
+
+.show-title {
+  margin: 50px 0 30px;
+}
+
+.stress-show-table {
+  margin: 0 auto;
+}
+
+.show-links {
+  margin: 20px 0 0 320px;
+}
+
+.link-options {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.options {
+  margin-right: 20px;
 }
 
 // ストレス編集ページ

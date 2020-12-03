@@ -1,10 +1,13 @@
-<h2>ストレス詳細</h2>
+<div class="stress-show-container">
+  <h2 class="show-title">ストレス詳細</h2>
+</div>
 
-<table class="table table-bordered">
+<div>
+  <table class="table table-bordered stress-show-table" style="width: 50%;">
   <thead>
     <tr>
-      <th><h4>写真</h4></th>
-      <th><h4>タイトル</h4></th>
+      <th style="width: 20%;"><h4>写真</h4></th>
+      <th style="width: 20%;"><h4>タイトル</h4></th>
       <th><h4>本文</h4></th>
     </tr>
   </thead>
@@ -16,10 +19,14 @@
     </tr>
   </tbody>
 </table>
-<div><%= link_to "一覧に戻る", stresses_path %></div>
+</div>
+
+<div class="show-links">
+  <div class="link-options">
+<div><%= link_to "一覧に戻る", stresses_path, class:"options" %></div>
 <% if @stress.user == current_user %>
-<div><%= link_to "編集する", edit_stress_path(@stress) %></div>
-<div><%= link_to "削除する", stress_path(@stress), method: :delete, "data-confirm" => "このストレスを削除しますか？" %></div>
+<div><%= link_to "編集する", edit_stress_path(@stress), class:"options" %></div>
+<div><%= link_to "削除する", stress_path(@stress), class:"options", method: :delete, "data-confirm" => "このストレスを削除しますか？" %></div>
 <% end %>
 
 <!--いいね機能-->
@@ -28,6 +35,7 @@
     <%= render "favorites/favorite-btn", stress: @stress %>
   </div>
 </div>
+  </div>
 <!--コメント機能-->
 <div>
   <i class="fa fa-comment"></i>
@@ -37,3 +45,5 @@
 <div class="comment_<%= @stress.id %>">
   <%= render "post_comments/post-comments", stress: @stress, post_comment: @post_comment %>
 </div>
+</div>
+

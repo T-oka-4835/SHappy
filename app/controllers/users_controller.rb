@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @stresses = @user.stresses
+    @stresses = @user.stresses.page(params[:page]).reverse_order
   end
 
   def edit

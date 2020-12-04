@@ -3,7 +3,7 @@
 </div>
 
 <% if @users.exists? %>
-<table class="table table-bordered relation-table" style="width: 40%;">
+<table class="table table-bordered relation-table" style="width: 35%;">
   <thead>
     <tr>
       <th>写真</th>
@@ -28,3 +28,7 @@
     <% end %>
   </tbody>
   </table>
+  <div style="text-align: center;">
+    <%= paginate @users %>
+  </div>
+

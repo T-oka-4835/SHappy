@@ -5,11 +5,8 @@
 <div class="contaier">
   <div class="row">
     <div class="col-lg-4 sidebar">
-      <div class="stress-index-picture">
-        <img src="photo-1536778215133-7e02ee89cb90.jpeg">
-      </div>
 <!--サイドバー-->
-      <table class="table table-bordered sidebar-table" style="width:70%; margin-left: 60px;">
+      <table class="table table-bordered sidebar-table" style="width:70%; margin: 90px 0 50px  60px;">
         <tbody>
           <tr style="text-align: center;">
             <td><%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', class:"profile-picture", fallback: "/smiley-54e9d24a4b_640.jpg" %></td>
@@ -27,6 +24,9 @@
        </table>
            <div class="user-find">
              <%= link_to "他のユーザーを探す", users_path, class:"user-find" %>
+           </div>
+           <div class="stress-index-picture">
+             <img src="photo-1529156069898-49953e39b3ac.jpeg">
            </div>
     </div>
 
@@ -60,7 +60,7 @@
          </tbody>
          <% end %>
        </table>
-       <%= paginate @stress %>
+       <!--<= paginate @stresses %>-->
      </div>
   </div>
 </div>

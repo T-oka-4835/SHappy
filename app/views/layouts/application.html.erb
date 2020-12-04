@@ -11,80 +11,78 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-<!--header-->
-  <header>
-    <% if user_signed_in? %>
-      <div class="header-word">
-        <%= link_to "SHappy", stresses_path %>
-      </div>
-    <% else %>
-      <div class="header-word">
-        <%= link_to "SHappy", root_path %>
-      </div>
-    <% end %>
-    <% if user_signed_in? %>
-<!--ハンバーガー-->
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-<!--ハンバーガー-->
-    <nav class="globalMenuSp">
-      <ul>
-        <li>
-          <%= link_to 'マイページ', user_path(current_user) %>
-        </li>
-        <li>
-          <%= link_to 'ストレスを吐き出す', new_stress_path, data: {"turbolinks" => false} %>
-        </li>
-        <li>
-          <%= link_to 'ストレスを発散する', releases_path %>
-        </li>
-        <li>
-          <%= link_to "通知", notifications_path %>
-        </li>
-        <li>
-          <%= link_to "お問い合わせ", inquiry_path %>
-        </li>
-        <li>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-        </li>
-      </ul>
-    </nav>
-    <% else %>
-<!--ハンバーガー-->
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-<!--ハンバーガー-->
-    <nav class="globalMenuSp">
-      <ul>
-        <li>
-          <a href="#about-jump">SHappy</a>
-        </li>
-        <li>
-          <%= link_to "新規登録", new_user_registration_path %>
-        </li>
-        <li>
-          <%= link_to "ログイン", new_user_session_path %>
-        </li>
-        <li>
-          <%= link_to "お問い合わせ", inquiry_path %>
-        </li>
-      </ul>
-    <% end %>
-  </header>
-
   <body>
-    <div class="background-color">
-      <%= yield %>
-    </div>
-   </body>
-
-  <footer>
-    Copyright 2020 SHappy All Rights Reserved.
-  </footer>
+    <!--header-->
+      <header>
+        <% if user_signed_in? %>
+          <div class="header-word">
+            <%= link_to "SHappy", stresses_path %>
+          </div>
+        <% else %>
+          <div class="header-word">
+            <%= link_to "SHappy", root_path %>
+          </div>
+        <% end %>
+        <% if user_signed_in? %>
+    <!--ハンバーガー-->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    <!--ハンバーガー-->
+        <nav class="globalMenuSp">
+          <ul>
+            <li>
+              <%= link_to 'マイページ', user_path(current_user) %>
+            </li>
+            <li>
+              <%= link_to 'ストレスを吐き出す', new_stress_path, data: {"turbolinks" => false} %>
+            </li>
+            <li>
+              <%= link_to 'ストレスを発散する', releases_path %>
+            </li>
+            <li>
+              <%= link_to "通知", notifications_path %>
+            </li>
+            <li>
+              <%= link_to "お問い合わせ", inquiry_path %>
+            </li>
+            <li>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            </li>
+          </ul>
+        </nav>
+        <% else %>
+    <!--ハンバーガー-->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    <!--ハンバーガー-->
+        <nav class="globalMenuSp">
+          <ul>
+            <li>
+              <a href="#about-jump">SHappy</a>
+            </li>
+            <li>
+              <%= link_to "新規登録", new_user_registration_path %>
+            </li>
+            <li>
+              <%= link_to "ログイン", new_user_session_path %>
+            </li>
+            <li>
+              <%= link_to "お問い合わせ", inquiry_path %>
+            </li>
+          </ul>
+        <% end %>
+      </header>
+      <div class="background-color">
+        <%= yield %>
+      </div>
+    <footer>
+      Copyright 2020 SHappy All Rights Reserved.
+    </footer>
+  </body>
 </html>

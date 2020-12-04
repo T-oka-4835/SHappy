@@ -9,18 +9,16 @@
     </div>
       <div class="confirm-name"><%= f.hidden_field :name %></div>
       <div class="confirm-info"><%= @inquiry.name %></div>
-
     <div class="inquiry-text">
       メールアドレス
     </div>
       <div><%= f.hidden_field :email %></div>
       <div class="confirm-info"><%= @inquiry.email %></div>
-
     <div class="inquiry-text">
       お問い合わせ内容
     </div>
       <div><%= f.hidden_field :message %></div>
       <div class="confirm-info"><%= simple_format(@inquiry.message) %></div>
-  <%= f.submit '送信', :class => 'btn btn-success' %>
+    <%= f.submit '送信', :class => 'btn btn-success' %>
   <% end %>
 </div>

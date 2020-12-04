@@ -16,11 +16,6 @@
   border-radius: 20px;
 }
 
-//サイドバー 上部の写真
-.stress-index-picture {
-  text-align: center;
-}
-
 .stress-index-picture > img {
   width: 80%;
   height: 200px;
@@ -40,6 +35,10 @@
 .past-stress {
   padding-top: 15px;
   margin-bottom: 20px;
+}
+
+.stress-index-picture {
+  text-align: center;
 }
 
 // ストレス投稿ページ

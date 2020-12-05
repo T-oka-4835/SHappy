@@ -5,14 +5,14 @@
         <a href="#" class="link-author"><%= post_comment.user.name %></a>
           <span class="comment-date"><%= post_comment.created_at.strftime('%Y/%m/%d') %></span>
       </div>
-        <div style="margin-bottom:10px;">
-          <%= post_comment.comment %>
+      <div style="margin-bottom:10px;">
+        <%= post_comment.comment %>
           <% if post_comment.user == current_user %>
-             <div>
-               <%= link_to "削除", stress_post_comment_path(post_comment.stress, post_comment), method: :delete, class: "btn btn-danger", remote: true %>
-             </div>
+            <div>
+              <%= link_to "削除", stress_post_comment_path(post_comment.stress, post_comment), method: :delete, class: "btn btn-danger", remote: true %>
+            </div>
           <% end %>
-        </div>
+      </div>
     </div>
   </div>
 <% end %>

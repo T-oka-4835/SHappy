@@ -28,9 +28,9 @@
             <% if @minimum_password_length %>
               <em>(<%= @minimum_password_length %> 文字以上)</em>
             <% end %><br />
-              <div class="form-word">
-                <%= f.password_field :password, autocomplete: "new-password" %>
-              </div>
+            <div class="form-word">
+              <%= f.password_field :password, autocomplete: "new-password" %>
+            </div>
         </div>
 
         <div class="field registration-text">
@@ -40,10 +40,9 @@
             </div>
         </div>
 
-      <div class="actions">
-        <%= f.submit "登録", class:"registration-submit btn" %>
-      </div>
+        <div class="actions">
+          <%= f.submit "登録", class:"registration-submit btn" %>
+        </div>
     <% end %>
-
   <%= link_to "ログインはこちらから", user_session_path, class:"devise-link" %>
 </div>

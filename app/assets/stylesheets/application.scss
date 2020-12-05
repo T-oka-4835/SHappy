@@ -379,3 +379,10 @@ nav.globalMenuSp.active {
   text-align: center;
   margin-bottom: 50px;
 }
+
+// エラーメッセージのレイアウト
+.alert-warning {
+  background-color: #003366;
+  width: 60%;
+  color: white;
+}

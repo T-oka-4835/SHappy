@@ -22,21 +22,21 @@
 <div class="show-links">
   <div class="link-options">
     <div><%= link_to "一覧に戻る", stresses_path, class:"options" %></div>
-      <% if @stress.user == current_user %>
-        <div><%= link_to "編集する", edit_stress_path(@stress), class:"options" %></div>
-        <div><%= link_to "削除する", stress_path(@stress), class:"options", method: :delete, "data-confirm" => "このストレスを削除しますか？" %></div>
-      <% end %>
-<!--いいね機能-->
-        <div id="stress_<%= @stress.id %>">
-          <div class="favorite-btn">
-            <%= render "favorites/favorite-btn", stress: @stress %>
-          </div>
-        </div>
+    <% if @stress.user == current_user %>
+      <div><%= link_to "編集する", edit_stress_path(@stress), class:"options" %></div>
+      <div><%= link_to "削除する", stress_path(@stress), class:"options", method: :delete, "data-confirm" => "このストレスを削除しますか？" %></div>
+    <% end %>
+    <!--いいね機能-->
+    <div id="stress_<%= @stress.id %>">
+      <div class="favorite-btn">
+        <%= render "favorites/favorite-btn", stress: @stress %>
+      </div>
+    </div>
   </div>
-<!--コメント機能-->
+  <!--コメント機能-->
   <div>
     <i class="fa fa-comment"></i>
-    <a href="#comments"><%= @stress.post_comments.count %>件コメント</a>
+    <p class="comments-count"><%= @stress.post_comments.count %>件コメント</p>
   </div>
   <div class="comment_<%= @stress.id %>">
     <%= render "post_comments/post-comments", stress: @stress, post_comment: @post_comment %>

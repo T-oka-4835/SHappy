@@ -2,6 +2,7 @@
   <h2 class="session-top">SHappyにログイン</h2>
 
     <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
       <div class="field session-text">
         <%= f.label :"ニックネーム", class:"fas fa-user fa-space" %><br />
           <div class="form-word">

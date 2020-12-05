@@ -23,8 +23,11 @@ class StressesController < ApplicationController
   def create
     @stress = Stress.new(stress_params)
     @stress.user_id = current_user.id
-    @stress.save
-    redirect_to stress_path(@stress)
+    if @stress.save
+      redirect_to stress_path(@stress)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -34,8 +37,11 @@ class StressesController < ApplicationController
   def update
     @stress = Stress.find(params[:id])
     @stress.user_id = current_user.id
-    @stress.update(stress_params)
-    redirect_to stress_path(@stress)
+    if @stress.update(stress_params)
+      redirect_to stress_path(@stress)
+    else
+      render :edit
+    end
   end
 
   def destroy

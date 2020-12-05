@@ -1,5 +1,7 @@
 class Stress < ApplicationRecord
   attachment :image
+  validates :title, presence: true
+  validates :body, presence: true
   belongs_to :user
   has_many :post_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
@@ -24,13 +26,7 @@ class Stress < ApplicationRecord
   end
 
   def create_notification_post_comment!(current_user, post_comment_id)
-    # 自分以外にコメントしている人をすべて取得し、全員に通知を送る
-    temp_ids = PostComment.select(:user_id).where(stress_id: id).where.not(user_id: current_user.id).distinct
-    temp_ids.each do |temp_id|
-      save_notification_post_comment!(current_user, post_comment_id, temp_id['user_id'])
-    end
-    # まだ誰もコメントしていない場合は、投稿者に通知を送る
-    save_notification_comment!(current_user, post_comment_id, user_id) if temp_ids.blank?
+    save_notification_comment!(current_user, post_comment_id, user_id)
   end
 
   def save_notification_comment!(current_user, post_comment_id, visited_id)

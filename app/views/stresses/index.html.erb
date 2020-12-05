@@ -21,46 +21,46 @@
             <td><%= link_to "自分をフォロー中のUser: #{@user.followers.count}人", user_followers_path(@user) %></td>
           </tr>
          </tbody>
-       </table>
-           <div class="user-find">
-             <%= link_to "他のユーザーを探す", users_path, class:"user-find" %>
-           </div>
-           <div class="stress-index-picture">
-             <img src="photo-1529156069898-49953e39b3ac.jpeg">
-           </div>
+      </table>
+        <div class="user-find">
+          <%= link_to "他のユーザーを探す", users_path, class:"user-find" %>
+        </div>
+        <div class="stress-index-picture">
+          <img src="photo-1529156069898-49953e39b3ac.jpeg">
+        </div>
     </div>
 
-     <div class="col-lg-7">
+    <div class="col-lg-7">
 <!--ゲストユーザーと、通常ログインで表示変更-->
-       <% if @user == User.guest %>
-         <h2 class="past-stress">ゲストさんと、フォローしたユーザーのストレス</h2>
-       <% else %>
-         <h2 class="past-stress"><%= @user.name %>さんと、フォローしたユーザーのストレス</h2>
-       <% end %>
+      <% if @user == User.guest %>
+        <h2 class="past-stress">ゲストさんと、フォローしたユーザーのストレス</h2>
+      <% else %>
+        <h2 class="past-stress"><%= @user.name %>さんと、フォローしたユーザーのストレス</h2>
+      <% end %>
 <!--ゲストユーザーと、通常ログインで表示変更-->
-       <table class="table table-bordered">
-         <thead>
-           <tr>
-             <th><h4>画像</h4></th>
-             <th><h4>ユーザー名</h4></th>
-             <th><h4>タイトル</h4></th>
-             <th><h4>投稿日</h4></th>
-             <th></th>
-           </tr>
-         </thead>
-         <% @stresses.each do |stress| %>
-         <tbody>
-           <tr>
-             <td style="width:25%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpeg', fallback: "/minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
-             <td><%= stress.user.name %></td>
-             <td><%= stress.title %></td>
-             <td><%= stress.created_at.to_s(:datetime_jp) %></td>
-             <td><%= link_to "詳細", stress_path(stress.id) %></td>
-           </tr>
-         </tbody>
-         <% end %>
-       </table>
-       <%= paginate @stresses %>
-     </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th><h4>画像</h4></th>
+            <th><h4>ユーザー名</h4></th>
+            <th><h4>タイトル</h4></th>
+            <th><h4>投稿日</h4></th>
+            <th></th>
+          </tr>
+        </thead>
+          <% @stresses.each do |stress| %>
+        <tbody>
+          <tr>
+            <td style="width:25%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpeg', fallback: "/minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
+            <td><%= stress.user.name %></td>
+            <td><%= stress.title %></td>
+            <td><%= stress.created_at.to_s(:datetime_jp) %></td>
+            <td><%= link_to "詳細", stress_path(stress.id) %></td>
+          </tr>
+        </tbody>
+          <% end %>
+      </table>
+        <%= paginate @stresses %>
+    </div>
   </div>
 </div>

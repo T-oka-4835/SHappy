@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <!--header-->
+<!--header-->
       <header>
         <% if user_signed_in? %>
           <div class="header-word">
@@ -24,43 +24,43 @@
           </div>
         <% end %>
         <% if user_signed_in? %>
-    <!--ハンバーガー-->
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-    <!--ハンバーガー-->
-        <nav class="globalMenuSp">
-          <ul>
-            <li>
-              <%= link_to 'マイページ', user_path(current_user) %>
-            </li>
-            <li>
-              <%= link_to 'ストレスを吐き出す', new_stress_path, data: {"turbolinks" => false} %>
-            </li>
-            <li>
-              <%= link_to 'ストレスを発散する', releases_path %>
-            </li>
-            <li>
-              <%= link_to "通知", notifications_path %>
-            </li>
-            <li>
-              <%= link_to "お問い合わせ", inquiry_path %>
-            </li>
-            <li>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            </li>
-          </ul>
-        </nav>
+<!--ハンバーガー-->
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+<!--ハンバーガー-->
+          <nav class="globalMenuSp">
+            <ul>
+              <li>
+                <%= link_to 'マイページ', user_path(current_user) %>
+              </li>
+              <li>
+                <%= link_to 'ストレスを吐き出す', new_stress_path, data: {"turbolinks" => false} %>
+              </li>
+              <li>
+                <%= link_to 'ストレスを発散する', releases_path %>
+              </li>
+              <li>
+                <%= link_to "通知", notifications_path %>
+              </li>
+              <li>
+                <%= link_to "お問い合わせ", inquiry_path %>
+              </li>
+              <li>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+          </nav>
         <% else %>
-    <!--ハンバーガー-->
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-    <!--ハンバーガー-->
+<!--ハンバーガー-->
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+<!--ハンバーガー-->
         <nav class="globalMenuSp">
           <ul>
             <li>
@@ -78,9 +78,9 @@
           </ul>
         <% end %>
       </header>
-      <div class="background-color">
-        <%= yield %>
-      </div>
+        <div class="background-color">
+          <%= yield %>
+        </div>
     <footer>
       Copyright 2020 SHappy All Rights Reserved.
     </footer>

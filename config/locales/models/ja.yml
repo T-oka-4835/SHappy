@@ -1,0 +1,20 @@
+# エラー文の日本語化
+ja:
+  activerecord:
+    models:
+      stress: ストレス
+    attributes:
+      stress:
+        title: タイトル
+        body: 本文
+
+ja:
+  activerecord:
+    models:
+      user: 新規登録
+    attributes:
+      user:
+        email: メールアドレス
+        password: パスワード
+        name: ニックネーム
+        phonenumber: 電話番号

@@ -25,6 +25,7 @@ class StressesController < ApplicationController
     @stress.user_id = current_user.id
     if @stress.save
       redirect_to stress_path(@stress)
+      flash[:success] = 'ストレスを吐き出しました！'
     else
       render :new
     end
@@ -39,6 +40,7 @@ class StressesController < ApplicationController
     @stress.user_id = current_user.id
     if @stress.update(stress_params)
       redirect_to stress_path(@stress)
+      flash[:change] = 'ストレスを編集しました！'
     else
       render :edit
     end
@@ -48,6 +50,7 @@ class StressesController < ApplicationController
     @stress = Stress.find(params[:id])
     @stress.destroy
     redirect_to stresses_path
+    flash[:delete] = '過去のストレスを削除しました！'
   end
 
   private

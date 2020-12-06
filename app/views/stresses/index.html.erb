@@ -16,7 +16,7 @@
             <td><%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', class:"profile-picture", fallback: "/smiley-54e9d24a4b_640.jpg" %></td>
           </tr>
           <tr>
-            <td>ニックネーム: <%= @user.name %></td>
+            <td>ニックネーム: <%= link_to @user.name, user_path(@user) %></td>
           </tr>
           <tr>
             <td><%= link_to "自分がフォロー中のUser: #{@user.followings.count}人", user_followings_path(@user) %></td>
@@ -45,8 +45,8 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th><h4>画像</h4></th>
-            <th><h4>ユーザー名</h4></th>
+            <th><h4>写真</h4></th>
+            <th><h4>投稿者</h4></th>
             <th><h4>タイトル</h4></th>
             <th><h4>投稿日</h4></th>
             <th></th>
@@ -56,7 +56,7 @@
         <tbody>
           <tr>
             <td style="width:25%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpeg', fallback: "/minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
-            <td><%= stress.user.name %></td>
+            <td><%= link_to stress.user.name, user_path(stress.user) %></td>
             <td><%= stress.title %></td>
             <td><%= stress.created_at.to_s(:datetime_jp) %></td>
             <td><%= link_to "詳細", stress_path(stress.id) %></td>

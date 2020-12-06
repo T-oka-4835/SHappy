@@ -16,7 +16,7 @@
         <div class="form-word">
           <%= f.text_area :body, class:"content-form" %>
         </div>
-      <h4>今の気分</h4>
+      <h4>今の気分を表す写真</h4>
         <div style="margin: 20px 450px 20px 0;">
           <%= attachment_image_tag @stress, :image, fallback: "/minimalism-52e8d1454a_640.jpg", format: 'jpeg', size:'200x150', onChange: "$('.img_field').change()", class: 'center-block img_prev'%>
         </div>

@@ -1,4 +1,5 @@
 class InquiryController < ApplicationController
+  before_action :authenticate_user!
   def index
     # メールの入力画面
     @inquiry = Inquiry.new

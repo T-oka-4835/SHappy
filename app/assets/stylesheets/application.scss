@@ -137,7 +137,11 @@ thead > tr {
 
 //ストレス発散各ページ共通
 .release-stress-message {
-  margin-left: 0 0 30px 130px;
+  margin: 50px 0 50px 130px;
+  display: inline-block;
+  background-color: #003366;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .stress-message {

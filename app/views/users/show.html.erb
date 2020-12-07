@@ -23,7 +23,8 @@
         </table>
           <div class="edit-link">
             <%= link_to "一覧に戻る", stresses_path, style:"margin-right: 20px" %>
-            <%= link_to "編集する", edit_user_path %>
+            <%= link_to "編集する", edit_user_path, style:"margin-right: 20px" %>
+            <%= link_to "退会する", user_path, method: :delete, "data-confirm" => "本当に退会しますか？"  %>
           </div>
       <% else %>
         <table class="table table-bordered profile-table">

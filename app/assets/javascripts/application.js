@@ -17,6 +17,7 @@
 //= require moment
 //= require bootstrap-sprockets
 //= require_tree .
+
 //Topに戻るボタン
 document.addEventListener("turbolinks:load", function() {
 $(function() {

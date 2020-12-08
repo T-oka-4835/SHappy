@@ -9,24 +9,25 @@
       </div>
       <div class="field session-text">
         <%= f.label :"ニックネーム" %><br />
-      <div class="form-word">
-        <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
-      </div>
+        <div class="form-word">
+          <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
+        </div>
       </div>
 
       <div class="field session-text">
         <%= f.label :"電話番号" %><br />
-      <div class="form-word">
-        <%= f.text_field :phonenumber, autofocus: true, autocomplete: "email" %>
-      </div>
+        <div class="form-word">
+          <%= f.text_field :phonenumber, autofocus: true, autocomplete: "email" %>
+        </div>
       </div>
 
       <div class="field session-text">
         <%= f.label :"メールアドレス" %><br />
-      <div class="form-word">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <div class="form-word">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
       </div>
       <%= f.submit "編集する", class:"edit-profile-submit btn" %>
     <% end %>
   </div>
+  

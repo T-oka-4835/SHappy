@@ -6,21 +6,21 @@
     <div class="inquiry-text">
       名前<span class="text-danger">（必須）</span>
     </div>
-      <div class="form-word inquiry-box">
-        <%= f.text_field :name %>
-      </div>
+    <div class="form-word inquiry-box">
+      <%= f.text_field :name %>
+    </div>
     <div class="inquiry-text">
       メールアドレス<span class="text-danger">（必須）</span>
     </div>
-      <div class="form-word inquiry-box">
-        <%= f.text_field :email %>
-      </div>
+    <div class="form-word inquiry-box">
+      <%= f.text_field :email %>
+    </div>
     <div class="inquiry-text">
       お問い合わせ内容
     </div>
-      <div class="form-word inquiry-message">
-        <%= f.text_area :message %>
-      </div>
+    <div class="form-word inquiry-message">
+      <%= f.text_area :message %>
+    </div>
     <%= f.submit '確認', class: 'btn btn-success' %>
   <% end %>
 </div>

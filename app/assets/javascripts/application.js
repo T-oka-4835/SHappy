@@ -19,7 +19,7 @@
 //= require_tree .
 
 //Topに戻るボタン
-document.addEventListener("turbolinks:load", function() {
+$(document).on('turbolinks:load', function() {
 $(function() {
   $('.back a').on('click',function(event){
     $('body, html').animate({
@@ -31,7 +31,7 @@ $(function() {
 })
 
 // ハンバーガー
-document.addEventListener("turbolinks:load", function() {
+$(document).on('turbolinks:load', function() {
   $(function() {
   $('.hamburger').click(function() {
     $(this).toggleClass('active');

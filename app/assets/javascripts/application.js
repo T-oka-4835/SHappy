@@ -43,6 +43,10 @@ $(function() {
     });
   });
 
+  $('#manu a[href]').on('click', function(event) {
+        $('.hamburger').trigger('click');
+    });
+
 // aboutへのスクロール
   $(function() {
 $('a[href^="#"]').click(function() {

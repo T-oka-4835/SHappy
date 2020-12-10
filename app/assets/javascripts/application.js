@@ -28,25 +28,22 @@ $(function() {
     event.preventDefault();
   });
 });
-})
+
 
 // ハンバーガー
-$(document).on('turbolinks:load', function() {
   $(function() {
   $('.hamburger').click(function() {
     $(this).toggleClass('active');
 
-if ($(this).hasClass('active')) {
-  $('.globalMenuSp').addClass('active');
-} else {
-  $('.globalMenuSp').removeClass('active');
-}
+  if ($(this).hasClass('active')) {
+    $('.globalMenuSp').addClass('active');
+  } else {
+    $('.globalMenuSp').removeClass('active');
+  }
+    });
   });
-});
-})
 
 // aboutへのスクロール
-$(document).on('turbolinks:load', function() {
   $(function() {
 $('a[href^="#"]').click(function() {
   var speed = 1000;
@@ -59,12 +56,8 @@ $('a[href^="#"]').click(function() {
   return false;
 });
 });
-})
-
-
 
 // aboutのメッセージの表示
-$(document).on('turbolinks:load', function() {
   $(function() {
   var fadeIn = $('.fade-in');
   $(window).scroll(function () {
@@ -78,4 +71,4 @@ $(document).on('turbolinks:load', function() {
     });
   });
 });
-});
+})

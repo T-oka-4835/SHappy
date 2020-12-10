@@ -13,7 +13,7 @@
     <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', class:"profile-picture", fallback: "/smiley-54e9d24a4b_640.jpg" %></td>
+        <td><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpg', class:"profile-picture", fallback: "smiley-54e9d24a4b_640.jpg" %></td>
         <td><%= link_to user.name, user_path(user) %></td>
       </tr>
     <% end %>
@@ -22,7 +22,7 @@
         <p>自分がフォロー中のユーザーはいません</p>
       </div>
       <div class="no-user-picture">
-        <img src="/sayhello.jpeg">
+        <%= image_tag("sayhello.jpg") %>
       </div>
 <% end %>
     </tbody>

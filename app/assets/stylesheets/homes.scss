@@ -75,3 +75,18 @@
   margin-right: 5px;
 }
 
+// aboutのメッセージの表示
+.fade-in {
+  opacity: 0;
+  transition-duration: 2000ms;
+  transition-property: opacity, transform;
+}
+
+.fade-in-up {
+  transform: translate(0, 50px);
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}

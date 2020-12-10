@@ -3,7 +3,7 @@
 </div>
 
 <div class="top-index-picture">
-  <%= image_tag asset_path("take-it-easy-55e8d1414e_640.jpg"), class:"top-index-image"%>
+  <%= image_tag("take-it-easy-55e8d1414e_640.jpg", class: "top-index-image") %>
 </div>
 
 <div class="contaier">
@@ -13,7 +13,7 @@
       <table class="table table-bordered sidebar-table" style="width:70%; margin: 90px 0 50px  60px;">
         <tbody>
           <tr style="text-align: center;">
-            <td><%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', class:"profile-picture", fallback: "/smiley-54e9d24a4b_640.jpg" %></td>
+            <td><%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpg', class:"profile-picture", fallback: "smiley-54e9d24a4b_640.jpg" %></td>
           </tr>
           <tr>
             <td>ニックネーム: <%= link_to @user.name, user_path(@user) %></td>
@@ -30,7 +30,7 @@
           <%= link_to "他のユーザーを探す", users_path, class:"user-find" %>
         </div>
         <div class="stress-index-picture">
-          <%= image_tag asset_path("photo-1529156069898-49953e39b3ac.jpeg"), class:"top-index-image"%>
+          <%= image_tag("photo-1529156069898-49953e39b3ac.jpg") %>
         </div>
     </div>
 
@@ -55,7 +55,7 @@
           <% @stresses.each do |stress| %>
         <tbody>
           <tr>
-            <td style="width:25%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpeg', fallback: "/minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
+            <td style="width:25%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpg', fallback: "minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
             <td><%= link_to stress.user.name, user_path(stress.user) %></td>
             <td><%= stress.title %></td>
             <td><%= stress.created_at.to_s(:datetime_jp) %></td>

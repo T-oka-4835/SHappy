@@ -1,5 +1,6 @@
 <h2 class="notification-top">通知</h2>
   <div class="notification-container">
+    <% if @notifications.exists? %>
     <table class="table notification-table" style="width: 60%;">
       <% @notifications.each do |notification| %>
         <tr>
@@ -25,6 +26,16 @@
         </tr>
       <% end %>
     </table>
+      <% else %>
+        <div class="no-notification">
+          <h2>
+            現在通知はありません！<br>
+            他のユーザーにフォロー、いいね、コメントされると、<br>
+            ここに通知が表示されます！
+          </h2>
+        </div>
+      <% end %>
+  </div>
     <div style="text-align: center;">
       <%= paginate @notifications %>
     </div>

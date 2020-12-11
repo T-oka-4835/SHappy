@@ -1,6 +1,7 @@
 // Place all the styles related to the releases controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .release-picture {
   text-align: center;
 }
@@ -8,6 +9,48 @@
 .release-picture > img {
   height: 100%;
   width: 100%;
+}
+
+// Top画像へのアニメーション
+.release-picture {
+  overflow: hidden;
+  position: relative;
+}
+
+.release-picture:before,
+.release-picture:after {
+  animation: 3s cubic-bezier(.4, 0, .2, 1) forwards;
+  background: #fff;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.release-picture:before {
+  animation-name: release-picture-before;
+  top: 0;
+  bottom: 50%;
+}
+
+.release-picture:after {
+  animation-name: release-picture-after;
+  top: 50%;
+  bottom: 0;
+}
+
+@keyframes release-picture-before {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes release-picture-after {
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 //ストレス発散ページ

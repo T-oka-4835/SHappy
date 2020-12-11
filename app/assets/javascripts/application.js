@@ -62,7 +62,7 @@ $('a[href^="#"]').click(function() {
 });
 });
 
-// aboutのメッセージの表示
+// 浮かび上がらせるアクション
   $(function() {
   var fadeIn = $('.fade-in');
   $(window).scroll(function () {
@@ -76,4 +76,4 @@ $('a[href^="#"]').click(function() {
     });
   });
 });
-})
+});

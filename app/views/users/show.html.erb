@@ -39,6 +39,7 @@
     <div class="col-lg-7">
       <h2>過去のストレス一覧</h2>
 <!--フォローしていないと、投稿が見れないよう条件分岐-->
+    <% if @stresses.exists? %>
       <% if @user != current_user %>
         <% if current_user.following?(@user) %>
           <table class="table table-bordered">
@@ -93,6 +94,12 @@
               <% end %>
             <%= paginate @stresses %>
           </table>
+      <% end %>
+      <% else %>
+        <p class="no-stress">
+          過去に吐き出したストレスはありません！<br>
+          ストレスを吐き出したら、ここに表示されます！
+        </p>
       <% end %>
     </div>
   </div>

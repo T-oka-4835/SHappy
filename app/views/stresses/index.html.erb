@@ -42,6 +42,7 @@
         <h2 class="past-stress"><%= @user.name %>さんと、フォローしたユーザーのストレス</h2>
       <% end %>
 <!--ゲストユーザーと、通常ログインで表示変更-->
+    <% if @stresses.exists? %>
       <table class="table table-bordered">
         <thead>
           <tr>
@@ -62,9 +63,16 @@
             <td><%= link_to "詳細", stress_path(stress.id) %></td>
           </tr>
         </tbody>
-          <% end %>
       </table>
       <%= paginate @stresses %>
+        <% end %>
+      <% else %>
+        <p class="no-stress-index">
+          過去に吐き出したストレスはありません！<br>
+          <%= @user.name %>さんか、フォローしたユーザーが<br>
+          ストレスを吐き出したら、ここに表示されます！
+        </p>
+      <% end %>
     </div>
   </div>
 </div>

@@ -3,7 +3,6 @@
 </div>
 
 <div class="stress-edit-container">
-
   <h2 class="stress-edit-title">ストレスを編集する</h2>
 </div>
 <div class="edit-picture">
@@ -13,18 +12,18 @@
 <div class="edit-stress-form">
   <%= form_with model: @stress, url: stress_path(@stress.id), method: :patch, local:true do |f| %>
     <h4>タイトル</h4>
-      <div class="form-word">
-        <%= f.text_field :title, class:"title-form" %>
-      </div>
+    <div class="form-word">
+      <%= f.text_field :title, class:"title-form" %>
+    </div>
     <h4>本文</h4>
-      <div class="form-word">
-        <%= f.text_area :body, class:"content-form" %>
-      </div>
+    <div class="form-word">
+      <%= f.text_area :body, class:"content-form" %>
+    </div>
     <h4>今の気分を表す写真</h4>
-      <div class="stress-picture">
-        <%= attachment_image_tag @stress, :image, :fill, 60, 60, format: 'jpeg', fallback: "minimalism-52e8d1454a_640.jpg", size:'200x150' %>
-        <%= f.attachment_field :image, plaveholder:"ストレス画像", class:"new-file" %>
-        <%= f.submit "編集する", class:"edit-submit btn" %>
-      </div>
+    <div class="stress-picture">
+      <%= attachment_image_tag @stress, :image, :fill, 60, 60, format: 'jpeg', fallback: "minimalism-52e8d1454a_640.jpg", size:'200x150' %>
+      <%= f.attachment_field :image, plaveholder:"ストレス画像", class:"new-file" %>
+      <%= f.submit "編集する", class:"edit-submit btn" %>
+    </div>
   <% end %>
 </div>

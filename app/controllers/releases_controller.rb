@@ -1,6 +1,6 @@
 class ReleasesController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
   end
 
@@ -24,4 +24,5 @@ class ReleasesController < ApplicationController
 
   def cry
   end
+
 end

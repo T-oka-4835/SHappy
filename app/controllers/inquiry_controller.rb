@@ -1,4 +1,5 @@
 class InquiryController < ApplicationController
+
   def index
     # メールの入力画面
     @inquiry = Inquiry.new
@@ -26,6 +27,7 @@ class InquiryController < ApplicationController
   end
 
   private
+
   def inquiry_params
     params.require(:inquiry).permit(:name, :email, :message)
   end

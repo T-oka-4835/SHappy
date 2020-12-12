@@ -39,40 +39,40 @@
     <div class="col-lg-7">
       <h2>過去のストレス一覧</h2>
 <!--フォローしていないと、投稿が見れないよう条件分岐-->
-    <% if @stresses.exists? %>
-      <% if @user != current_user %>
-        <% if current_user.following?(@user) %>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th><h4>写真</h4></th>
-                <th><h4>タイトル</h4></th>
-                <th><h4>投稿日</h4></th>
-                <th></th>
-              </tr>
-            </thead>
+      <% if @stresses.exists? %>
+        <% if @user != current_user %>
+          <% if current_user.following?(@user) %>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th><h4>写真</h4></th>
+                  <th><h4>タイトル</h4></th>
+                  <th><h4>投稿日</h4></th>
+                  <th></th>
+                </tr>
+              </thead>
               <% @stresses.each do |stress| %>
-            <tbody>
-              <tr>
-                <td style="width:30%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpg', fallback: "minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
-                <td><%= stress.title %></td>
-                <td><%= stress.created_at.to_s(:datetime_jp) %></td>
-                <td><%= link_to "詳細", stress_path(stress.id) %></td>
-              </tr>
-            </tbody>
+              <tbody>
+                <tr>
+                  <td style="width:30%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpg', fallback: "minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
+                  <td><%= stress.title %></td>
+                  <td><%= stress.created_at.to_s(:datetime_jp) %></td>
+                  <td><%= link_to "詳細", stress_path(stress.id) %></td>
+                </tr>
+              </tbody>
               <% end %>
-            <%= paginate @stresses %>
-          </table>
-        <% else %>
-          <div class="must-follow">
-            <h2>
-              このユーザーの投稿を見るためには、<br>
-              このユーザーをフォローして下さい
-            </h2>
-          </div>
-        <% end %>
+              <%= paginate @stresses %>
+            </table>
+          <% else %>
+            <div class="must-follow">
+              <h2>
+                このユーザーの投稿を見るためには、<br>
+                このユーザーをフォローして下さい
+              </h2>
+            </div>
+          <% end %>
 <!--ユーザーが自分の場合、過去の投稿を表示-->
-      <% else %>
+        <% else %>
           <table class="table table-bordered">
             <thead>
               <tr>
@@ -94,7 +94,7 @@
               <% end %>
             <%= paginate @stresses %>
           </table>
-      <% end %>
+        <% end %>
       <% else %>
         <p class="no-stress">
           過去に吐き出したストレスはありません！<br>

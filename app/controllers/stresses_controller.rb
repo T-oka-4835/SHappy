@@ -55,6 +55,7 @@ class StressesController < ApplicationController
   end
 
   private
+
   def stress_params
     params.require(:stress).permit(:user, :title, :body, :image)
   end
@@ -65,4 +66,5 @@ class StressesController < ApplicationController
       redirect_to stresses_path
     end
   end
+
 end

@@ -17,16 +17,17 @@
           <td><%= link_to user.name, user_path(user) %></td>
         </tr>
       <% end %>
-<% else %>
-      <div class="no-user">
-        <p>自分をフォロー中のユーザーはいません</p>
-      </div>
-      <div class="no-user-picture">
-        <%= image_tag("sayhello.jpg") %>
-      </div>
-<% end %>
     </tbody>
   </table>
+<% else %>
+  <div class="no-user">
+    <p>自分をフォロー中のユーザーはいません</p>
+  </div>
+  <div class="no-user-picture">
+    <%= image_tag("sayhello.jpg") %>
+  </div>
+<% end %>
+
 <div style="text-align: center;">
   <%= paginate @users %>
 </div>

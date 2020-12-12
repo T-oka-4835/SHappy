@@ -8,19 +8,19 @@
 <div class="new-stress-form">
   <%= form_with model:@stress, url:stresses_path, local:true do |f| %>
     <%= render 'layouts/error', model: f.object %>
-      <h4>タイトル</h4>
-        <div class="form-word">
-          <%= f.text_field :title, class:"title-form" %>
-        </div>
-      <h4>本文</h4>
-        <div class="form-word">
-          <%= f.text_area :body, class:"content-form" %>
-        </div>
-      <h4>今の気分を表す写真</h4>
-        <div style="margin: 20px 450px 20px 0;">
-          <%= attachment_image_tag @stress, :image, fallback: "minimalism-52e8d1454a_640.jpg", format: 'jpg', size:'200x150', onChange: "$('.img_field').change()", class: 'center-block img_prev'%>
-        </div>
-          <%= f.attachment_field :image, class: 'img_field' %>
-          <%= f.submit "吐き出す", class:"new-submit btn" %>
+    <h4>タイトル</h4>
+    <div class="form-word">
+      <%= f.text_field :title, class:"title-form" %>
+    </div>
+    <h4>本文</h4>
+    <div class="form-word">
+      <%= f.text_area :body, class:"content-form" %>
+    </div>
+    <h4>今の気分を表す写真</h4>
+    <div style="margin: 20px 450px 20px 0;">
+      <%= attachment_image_tag @stress, :image, fallback: "minimalism-52e8d1454a_640.jpg", format: 'jpg', size:'200x150', onChange: "$('.img_field').change()", class: 'center-block img_prev'%>
+    </div>
+    <%= f.attachment_field :image, class: 'img_field' %>
+    <%= f.submit "吐き出す", class:"new-submit btn" %>
   <% end %>
 </div>

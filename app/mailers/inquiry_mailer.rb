@@ -5,4 +5,5 @@ class InquiryMailer < ApplicationMailer
     @inquiry = inquiry
     mail(:to => ENV['SEND_MAIL'], :subject => 'お問い合わせを承りました')
   end
+
 end

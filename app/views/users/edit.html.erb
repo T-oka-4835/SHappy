@@ -1,32 +1,32 @@
 <h2 class="edit-mypage">マイページの編集</h2>
-  <div class="edit-user-container">
-    <%= form_with model: @user, url: user_path, method: :patch, local: true do |f| %>
-      <div class="user-edit-picture">
-        <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, class: "profile-picture", fallback: "smiley-54e9d24a4b_640.jpg"%>
+<div class="edit-user-container">
+  <%= form_with model: @user, url: user_path, method: :patch, local: true do |f| %>
+    <div class="user-edit-picture">
+      <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, class: "profile-picture", fallback: "smiley-54e9d24a4b_640.jpg"%>
+    </div>
+    <div>
+      <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-file" %>
+    </div>
+    <div class="field session-text">
+      <%= f.label :"ニックネーム" %><br />
+      <div class="form-word">
+        <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
       </div>
-      <div>
-        <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-file" %>
-      </div>
-      <div class="field session-text">
-        <%= f.label :"ニックネーム" %><br />
-        <div class="form-word">
-          <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
-        </div>
-      </div>
+    </div>
 
-      <div class="field session-text">
-        <%= f.label :"電話番号" %><br />
-        <div class="form-word">
-          <%= f.text_field :phonenumber, autofocus: true, autocomplete: "email" %>
-        </div>
+    <div class="field session-text">
+      <%= f.label :"電話番号" %><br />
+      <div class="form-word">
+        <%= f.text_field :phonenumber, autofocus: true, autocomplete: "email" %>
       </div>
+    </div>
 
-      <div class="field session-text">
-        <%= f.label :"メールアドレス" %><br />
-        <div class="form-word">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <div class="field session-text">
+      <%= f.label :"メールアドレス" %><br />
+      <div class="form-word">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
-      </div>
-      <%= f.submit "編集する", class:"edit-profile-submit btn" %>
-    <% end %>
-  </div>
+    </div>
+    <%= f.submit "編集する", class:"edit-profile-submit btn" %>
+  <% end %>
+</div>

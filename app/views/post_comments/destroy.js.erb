@@ -1,3 +1,2 @@
 $(".comments-count").html("<%= @stress.post_comments.count %>件コメント");
 $('.comment_<%= @stress.id %>').html("<%= j(render partial: 'post_comments/post-comments', locals: {stress: @stress,post_comment: @post_comment}) %>");
-

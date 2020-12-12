@@ -1,11 +1,8 @@
 class User < ApplicationRecord
-
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
   validates :name, length: {in: 2..15}, uniqueness: true
   validates :phonenumber, presence: true, uniqueness: true
-
   attachment :profile_image
 
   has_many :stresses, dependent: :destroy

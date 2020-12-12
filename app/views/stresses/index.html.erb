@@ -67,11 +67,19 @@
       <%= paginate @stresses %>
         <% end %>
       <% else %>
+      <% if @user == User.guest %>
+        <p class="no-stress-index">
+          過去に吐き出したストレスはありません！<br>
+          ゲストさんか、フォローしたユーザーが<br>
+          ストレスを吐き出したら、ここに表示されます！
+        </p>
+      <% else %>
         <p class="no-stress-index">
           過去に吐き出したストレスはありません！<br>
           <%= @user.name %>さんか、フォローしたユーザーが<br>
           ストレスを吐き出したら、ここに表示されます！
         </p>
+      <% end %>
       <% end %>
     </div>
   </div>

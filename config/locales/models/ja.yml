@@ -2,19 +2,14 @@
 ja:
   activerecord:
     models:
-      stress: ストレス
-    attributes:
-      stress:
-        title: タイトル
-        body: 本文
-
-ja:
-  activerecord:
-    models:
       user: 新規登録
+      stress: ストレス
     attributes:
       user:
         email: メールアドレス
         password: パスワード
         name: ニックネーム
         phonenumber: 電話番号
+      stress:
+        title: タイトル
+        body: 本文

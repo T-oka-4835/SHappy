@@ -1,4 +1,5 @@
 class StressesController < ApplicationController
+  before_action :correct_user, only: [:edit, :update]
   before_action :authenticate_user!
 
   def index
@@ -56,5 +57,12 @@ class StressesController < ApplicationController
   private
   def stress_params
     params.require(:stress).permit(:user, :title, :body, :image)
+  end
+
+  def correct_user
+    stress = Stress.find(params[:id])
+    if current_user != stress.user.id
+      redirect_to stresses_path
+    end
   end
 end

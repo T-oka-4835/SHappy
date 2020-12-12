@@ -9,7 +9,7 @@
       <% if @user == current_user %>
         <table class="table table-bordered">
           <tr>
-            <th>プロフィール画像</th><td><%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpg', class: "profile-picture", fallback: "smiley-54e9d24a4b_640.jpg" %></td>
+            <th>プロフィール画像</th><td><%= attachment_image_tag @user, :profile_image, :fill, 200, 200, format: 'jpg', class: "profile-picture", fallback: "smiley-54e9d24a4b_640.jpg" %></td>
           </tr>
           <tr>
             <th>ニックネーム</th><td><%= @user.name %></td>
@@ -51,16 +51,16 @@
                   <th></th>
                 </tr>
               </thead>
-              <% @stresses.each do |stress| %>
               <tbody>
+                <% @stresses.each do |stress| %>
                 <tr>
-                  <td style="width:30%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpg', fallback: "minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
+                  <td style="width:30%"><%= attachment_image_tag stress, :image, :fill, 200, 200, format: 'jpg', fallback: "minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
                   <td><%= stress.title %></td>
                   <td><%= stress.created_at.to_s(:datetime_jp) %></td>
                   <td><%= link_to "詳細", stress_path(stress.id) %></td>
                 </tr>
+                <% end %>
               </tbody>
-              <% end %>
               <%= paginate @stresses %>
             </table>
           <% else %>
@@ -82,16 +82,16 @@
                 <th></th>
               </tr>
             </thead>
-              <% @stresses.each do |stress| %>
             <tbody>
+              <% @stresses.each do |stress| %>
               <tr>
-                <td style="width:30%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpg', fallback: "minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
+                <td style="width:30%"><%= attachment_image_tag stress, :image, :fill, 200, 200, format: 'jpg', fallback: "minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
                 <td><%= stress.title %></td>
                 <td><%= stress.created_at.to_s(:datetime_jp) %></td>
                 <td><%= link_to "詳細", stress_path(stress.id) %></td>
               </tr>
-            </tbody>
               <% end %>
+            </tbody>
             <%= paginate @stresses %>
           </table>
         <% end %>

@@ -8,15 +8,15 @@
           <th><h4>過去のストレス数</h4></th>
         </tr>
       </thead>
-    <% @users.each do |user| %>
 　    <tbody>
+　      <% @users.each do |user| %>
         <tr>
-          <td><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpg', class:"profile-picture", fallback: "smiley-54e9d24a4b_640.jpg" %></td>
+          <td><%= attachment_image_tag user, :profile_image, :fill, 200, 200, format: 'jpg', class:"profile-picture", fallback: "smiley-54e9d24a4b_640.jpg" %></td>
           <td><%= link_to user.name, user_path(user) %></td>
           <td><%= user.stresses.count %>個</td>
         </tr>
+        <% end %>
 　    </tbody>
-    <% end %>
     </table>
   <%= paginate @users %>
 </div>

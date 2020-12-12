@@ -13,7 +13,7 @@
       <table class="table table-bordered sidebar-table" style="width:70%; margin: 90px 0 50px  60px;">
         <tbody>
           <tr style="text-align: center;">
-            <td><%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpg', class:"profile-picture", fallback: "smiley-54e9d24a4b_640.jpg" %></td>
+            <td><%= attachment_image_tag @user, :profile_image, :fill, 200, 200, format: 'jpg', class:"profile-picture", fallback: "smiley-54e9d24a4b_640.jpg" %></td>
           </tr>
           <tr>
             <td>ニックネーム: <%= link_to @user.name, user_path(@user) %></td>
@@ -53,19 +53,19 @@
               <th></th>
             </tr>
           </thead>
-          <% @stresses.each do |stress| %>
           <tbody>
+            <% @stresses.each do |stress| %>
             <tr>
-              <td style="width:25%"><%= attachment_image_tag stress, :image, :fill, 30, 30, format: 'jpg', fallback: "minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
+              <td style="width:25%"><%= attachment_image_tag stress, :image, :fill, 200, 200, format: 'jpg', fallback: "minimalism-52e8d1454a_640.jpg", size:'150x100' %></td>
               <td><%= link_to stress.user.name, user_path(stress.user) %></td>
               <td><%= stress.title %></td>
               <td><%= stress.created_at.to_s(:datetime_jp) %></td>
               <td><%= link_to "詳細", stress_path(stress.id) %></td>
             </tr>
+            <% end %>
           </tbody>
         </table>
         <%= paginate @stresses %>
-        <% end %>
       <% else %>
         <% if @user == User.guest %>
           <p class="no-stress-index">

@@ -62,7 +62,7 @@ class StressesController < ApplicationController
 
   def correct_user
     stress = Stress.find(params[:id])
-    if current_user != stress.user.id
+    if current_user.id != stress.user.id
       redirect_to stresses_path
     end
   end

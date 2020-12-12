@@ -18,7 +18,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><%= attachment_image_tag @stress, :image, :fill, 30, 30, format: 'jpeg', fallback: "minimalism-52e8d1454a_640.jpg", size:'200x150' %></td>
+      <td><%= attachment_image_tag @stress, :image, :fill, 200, 200, format: 'jpg', fallback: "minimalism-52e8d1454a_640.jpg", size:'200x150' %></td>
       <td><%= link_to @stress.user.name, user_path(@stress.user) %></td>
       <td><%= @stress.title %></td>
       <td><%= @stress.body %></td>

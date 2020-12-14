@@ -102,6 +102,7 @@ That is the reason I chose this theme.
 ### ターゲットユーザ/target user
 
 ビジネスパーソン、主婦、学生など、ストレスに悩む全ての方
+
 Everyone who suffer from stress like business person,housewife,students
 
 ============================================================
@@ -109,6 +110,7 @@ Everyone who suffer from stress like business person,housewife,students
 ### 主な利用シーン/When you use ?
 
 ストレスを感じた時
+
 Whenever you feel stress 
 
 ============================================================

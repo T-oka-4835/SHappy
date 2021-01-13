@@ -1,48 +1,50 @@
-<div class="registration-container">
-  <h2 class="registration-top">SHappyに登録</h2>
-    <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
-      <div class="field registration-text">
-        <%= f.label :"ニックネーム", class:"fas fa-user fa-space" %>
-        <div class="form-word">
-          <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
+<div class="container">
+  <div class="registration-container">
+    <h2 class="registration-top">SHappyに登録</h2>
+      <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="field registration-text">
+          <%= f.label :"ニックネーム", class:"fas fa-user fa-space" %>
+          <div class="form-word">
+            <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
+          </div>
         </div>
-      </div>
 
-      <div class="field registration-text">
-        <%= f.label :"電話番号", class:"fas fa-mobile-alt" %><br />
-        <div class="form-word">
-          <%= f.text_field :phonenumber, autofocus: true, autocomplete: "email" %>
+        <div class="field registration-text">
+          <%= f.label :"電話番号", class:"fas fa-mobile-alt" %><br />
+          <div class="form-word">
+            <%= f.text_field :phonenumber, autofocus: true, autocomplete: "email" %>
+          </div>
         </div>
-      </div>
 
-      <div class="field registration-text">
-        <%= f.label :"メールアドレス", class:"far fa-envelope" %><br />
-        <div class="form-word">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <div class="field registration-text">
+          <%= f.label :"メールアドレス", class:"far fa-envelope" %><br />
+          <div class="form-word">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
         </div>
-      </div>
 
-      <div class="field registration-text">
-        <%= f.label :"パスワード", class:"fas fa-lock" %>
-          <% if @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> 文字以上)</em>
-          <% end %><br />
-        <div class="form-word">
-          <%= f.password_field :password, autocomplete: "new-password" %>
+        <div class="field registration-text">
+          <%= f.label :"パスワード", class:"fas fa-lock" %>
+            <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> 文字以上)</em>
+            <% end %><br />
+          <div class="form-word">
+            <%= f.password_field :password, autocomplete: "new-password" %>
+          </div>
         </div>
-      </div>
 
-      <div class="field registration-text">
-        <%= f.label :"パスワード確認", class:"fas fa-lock" %><br />
-        <div class="form-word">
-          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        <div class="field registration-text">
+          <%= f.label :"パスワード確認", class:"fas fa-lock" %><br />
+          <div class="form-word">
+            <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+          </div>
         </div>
-      </div>
 
-      <div class="actions">
-        <%= f.submit "登録", class:"registration-submit btn" %>
-      </div>
-    <% end %>
-  <%= link_to "ログインはこちらから", user_session_path, class:"devise-link" %>
+        <div class="actions">
+          <%= f.submit "登録", class:"registration-submit btn" %>
+        </div>
+      <% end %>
+    <%= link_to "ログインはこちらから", user_session_path, class:"devise-link" %>
+  </div>
 </div>

@@ -1,24 +1,26 @@
-<div class="session-container">
-  <h2 class="session-top">SHappyにログイン</h2>
-    <%= form_with model: @user, url: user_session_path, local: true do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
-      <div class="field session-text">
-        <%= f.label :"ニックネーム", class:"fas fa-user fa-space" %><br />
-        <div class="form-word">
-          <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
+<div class="container">
+  <div class="session-container">
+    <h2 class="session-top">SHappyにログイン</h2>
+      <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="field session-text">
+          <%= f.label :"ニックネーム", class:"fas fa-user fa-space" %><br />
+          <div class="form-word">
+            <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
+          </div>
         </div>
-      </div>
 
-      <div class="field session-text">
-        <%= f.label :"パスワード", class:"fas fa-lock" %><br />
-        <div class="form-word">
-          <%= f.password_field :password, autocomplete: "current-password" %>
+        <div class="field session-text">
+          <%= f.label :"パスワード", class:"fas fa-lock" %><br />
+          <div class="form-word">
+            <%= f.password_field :password, autocomplete: "current-password" %>
+          </div>
         </div>
-      </div>
 
-      <div class="actions">
-        <%= f.submit "ログイン", class:"session-submit btn" %>
-      </div>
-    <% end %>
-  <%= link_to "新規登録はこちらから", new_user_registration_path, class:"devise-link" %>
+        <div class="actions">
+          <%= f.submit "ログイン", class:"session-submit btn" %>
+        </div>
+      <% end %>
+    <%= link_to "新規登録はこちらから", new_user_registration_path, class:"devise-link" %>
+  </div>
 </div>
